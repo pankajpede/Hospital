@@ -1,0 +1,43 @@
+    /* Custom styles for the testimonial section */
+    .client-testi {
+        transition: all 0.3s ease;
+    }
+    
+    .client-testi:hover {
+        transform: translateY(-5px);
+    }
+    
+    .client-testi .card {
+        transition: all 0.3s ease;
+        border: none;
+    }
+    
+    .client-testi:hover .card {
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    .client-image {
+        width: 60px;
+        height: 60px;
+        margin-right: 15px;
+        flex-shrink: 0;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+    
+    /* Carousel navigation arrows */
+    .tns-controls button {
+        background: #fff;
+        color: #000000;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 30px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        margin: 0 5px;
+        transition: all 0.3s ease;
+    }
+    
+    .tns-controls button:hover {
+        background: #000000;
+        color: #fff;
+    }

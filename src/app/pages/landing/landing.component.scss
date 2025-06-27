@@ -1,0 +1,10 @@
+/* Typewriter cursor styling */
+    .typewriter-cursor {
+        animation: blink 1s step-end infinite;
+        color: var(--bs-primary);
+    }
+    
+    @keyframes blink {
+        from, to { opacity: 1; }
+        50% { opacity: 0; }
+    }
