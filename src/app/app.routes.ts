@@ -22,14 +22,6 @@ import { HealthcareComponent } from './pages/industries-we-Serve/healthcare/heal
 import { HospitalityComponent } from './pages/industries-we-Serve/hospitality/hospitality.component';
 import { RealEstateComponent } from './pages/industries-we-Serve/real-estate/real-estate.component';
 import { JobApplyComponent } from './pages/job-apply/job-apply.component';
-import { IndustrialMarketingPowerComponent } from './pages/blog/industrial-marketing-power/industrial-marketing-power.component';
-import { AiTools2024Component } from './pages/blog/ai-tools-2024/ai-tools-2024.component';
-import { HealthcareSocialMediaComponent } from './pages/blog/healthcare-social-media/healthcare-social-media.component';
-import { Gpt4oComponent } from './pages/blog/gpt4o/gpt4o.component';
-import { HealthcareIndustryComponent } from './pages/blog/healthcare-industry/healthcare-industry.component';
-import { WebsiteDreamTeamComponent } from './pages/blog/website-dream-team/website-dream-team.component';
-import { ProfessionalProductPhotographyComponent } from './pages/blog/professional-product-photography/professional-product-photography.component';
-import { ECommerceBusinessComponent } from './pages/blog/e-commerce-business/e-commerce-business.component';
 import { ReferenceComponent } from './pages/reference/reference.component';
 
 
@@ -60,13 +52,5 @@ export const routes: Routes = [
     { path: 'healthcare' , component: HealthcareComponent },
     { path: 'hospitality' , component: HospitalityComponent },
     { path: 'real-estate' , component: RealEstateComponent },
-    { path: 'industrial-marketing-power' , component: IndustrialMarketingPowerComponent },
-    { path: 'ai-tools' , component: AiTools2024Component },
-    { path: 'healthcare-social-media', component: HealthcareSocialMediaComponent },
-    { path: 'gpt4o' , component: Gpt4oComponent },
-    { path: 'healthcare-industry', component: HealthcareIndustryComponent },
-    { path: 'website-dream-team', component: WebsiteDreamTeamComponent },
-    { path: 'professional-product-photography', component: ProfessionalProductPhotographyComponent},
-    {path: 'e-commerce-business', component: ECommerceBusinessComponent},
     {path: 'reference', component: ReferenceComponent},
 ];

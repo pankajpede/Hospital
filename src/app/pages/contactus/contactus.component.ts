@@ -13,17 +13,27 @@ import * as feather from 'feather-icons';
   styleUrls: ['./contactus.component.scss']
 })
 export class ContactusComponent implements AfterViewInit {
-  @ViewChild('contactForm') contactForm!: NgForm;
+  @ViewChild('appointmentForm') appointmentForm!: NgForm;
   showPopup: boolean = false;
   popupMessage: string = '';
   popupType: 'success' | 'error' = 'success';
   
-  formData = {
+  appointmentData = {
     name: '',
-    useremail: '',
-    mobile: '',
+    email: '',
+    phone: '',
+    date: '',
+    department: '',
     message: ''
   };
+
+  departments = [
+    { value: 'cardiology', label: 'Cardiology' },
+    { value: 'neurology', label: 'Neurology' },
+    { value: 'pediatrics', label: 'Pediatrics' },
+    { value: 'orthopedics', label: 'Orthopedics' },
+    { value: 'general', label: 'General Medicine' }
+  ];
 
   formSubmitted = false;
 
@@ -35,36 +45,39 @@ export class ContactusComponent implements AfterViewInit {
     window.scrollTo(0, 0);
   }
 
-  public async sendEmail() {
+  public async submitAppointment() {
     this.formSubmitted = true;
     
     // Check if form is invalid
-    if (this.contactForm.invalid) {
+    if (this.appointmentForm.invalid) {
       this.showNotification('Please fill all required fields correctly', 'error');
       return;
     }
     
     try {
       const templateParams = {
-        name: this.formData.name,
-        useremail: this.formData.useremail,
-        mobile: this.formData.mobile,
-        message: this.formData.message
+        patient_name: this.appointmentData.name,
+        patient_email: this.appointmentData.email,
+        patient_phone: this.appointmentData.phone,
+        appointment_date: this.appointmentData.date,
+        department: this.appointmentData.department,
+        symptoms: this.appointmentData.message,
+        to_email: 'appointments@hospitalname.com' // Change to your hospital email
       };
       
       await emailjs.send(
-        'service_07sry8n',
-        'template_spy9kpk',
+        'your_service_id', // Replace with your EmailJS service ID
+        'your_template_id', // Replace with your EmailJS template ID
         templateParams,
-        { publicKey: 'O-7JrDdZ6ClaoExpK' }
+        { publicKey: 'your_public_key' } // Replace with your EmailJS public key
       );
       
-      this.showNotification('We have received your enquiry! We will contact you soon.', 'success');
+      this.showNotification('Your appointment request has been submitted successfully! We will contact you shortly to confirm.', 'success');
       this.resetForm();
-      this.contactForm.resetForm();
+      this.appointmentForm.resetForm();
     } catch (error) {
-      console.log('FAILED...', (error as EmailJSResponseStatus).text);
-      this.showNotification('Failed to send your message. Please try again later.', 'error');
+      console.error('Appointment submission failed:', error);
+      this.showNotification('Failed to submit your appointment request. Please try again later or call us directly.', 'error');
     }
   }
 
@@ -79,10 +92,12 @@ export class ContactusComponent implements AfterViewInit {
   }
 
   resetForm() {
-    this.formData = {
+    this.appointmentData = {
       name: '',
-      useremail: '',
-      mobile: '',
+      email: '',
+      phone: '',
+      date: '',
+      department: '',
       message: ''
     };
     this.formSubmitted = false;
@@ -98,5 +113,17 @@ export class ContactusComponent implements AfterViewInit {
       'is-invalid': control.invalid && (control.dirty || control.touched || this.formSubmitted),
       'is-valid': control.valid && (control.dirty || control.touched)
     };
+  }
+
+  // Format date for display
+  formatDate(dateString: string): string {
+    if (!dateString) return '';
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', { 
+      weekday: 'long', 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    });
   }
 }

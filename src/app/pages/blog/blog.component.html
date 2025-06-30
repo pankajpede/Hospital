@@ -1,19 +1,25 @@
 <!-- Hero Start -->
-<section class="bg-half-170 bg-light d-table w-100">
+<section class="bg-half-170 d-table w-100" style="background: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center center; background-size: cover;">
+    <div class="bg-overlay bg-gradient-overlay"></div>
     <div class="container">
         <div class="row mt-5 justify-content-center">
             <div class="col-lg-12 text-center">
-                <div class="pages-heading">
-                    <h4 class="title mb-0"> Blog </h4>
+                <div class="title-heading text-center">
+                    <h1 class="heading mb-3 text-white">Hospital Events & Health Programs</h1>
+                    <p class="lead mx-auto text-white-75">Join our community health initiatives and educational events to improve your wellbeing</p>
+                    <div class="mt-4">
+                        <a href="#events" class="btn btn-primary me-2">View Events</a>
+                        <a href="#contact" class="btn btn-outline-light">Contact Us</a>
+                    </div>
                 </div>
-            </div> <!--end col-->
+            </div><!--end col-->
         </div><!--end row-->
-
+        
         <div class="position-breadcrumb">
             <nav aria-label="breadcrumb" class="d-inline-block">
                 <ul class="breadcrumb rounded shadow mb-0 px-4 py-2">
-                    <li class="breadcrumb-item"><a [routerLink]="['/']">ONELLASOFT</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Blog Grid</li>
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Events</li>
                 </ul>
             </nav>
         </div>
@@ -23,7 +29,7 @@
 
 <!-- Shape Start -->
 <div class="position-relative">
-    <div class="shape overflow-hidden text-color-white">
+    <div class="shape overflow-hidden text-white">
         <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
         </svg>
@@ -31,191 +37,211 @@
 </div>
 <!--Shape End-->
 
-<!-- Blog STart -->
-<section class="section">
+<!-- Events Start -->
+<section class="section" id="events">
     <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <div class="section-title mb-4 pb-2">
+                    <span class="badge badge-soft-primary mb-2">Community Health</span>
+                    <h4 class="title mb-4">Upcoming Health Events & Programs</h4>
+                    <p class="text-muted para-desc mx-auto mb-0">Join our free community health programs, seminars, and workshops led by our medical specialists. All events are open to the public unless noted otherwise.</p>
+                </div>
+            </div><!--end col-->
+        </div><!--end row-->
+
         <div class="row">
+            <!-- Event 1 -->
             <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                <div class="card blog blog-primary rounded border-0 shadow overflow-hidden"
-                    [routerLink]="['/industrial-marketing-power']" style="cursor: pointer;">
-                    <div class="position-relative">
-                        <img src="./images/blog/blog1.jpg" class="card-img-top" alt="...">
-                        <div class="overlay rounded-top"></div>
+                <div class="card event rounded border-0 shadow overflow-hidden transition hover:shadow-lg">
+                    <div class="position-relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="card-img-top transition hover:scale-105" alt="Heart Health Seminar">
+                        <div class="event-date bg-primary text-white">
+                            <h5 class="day mb-0">15</h5>
+                            <span class="month">JUN</span>
+                        </div>
+                        <div class="event-category bg-danger text-white shadow">Free</div>
                     </div>
                     <div class="card-body content">
-                        <h5><a href="javascript:void(0)" class="card-title title text-dark">4 Reasons Why Digital
-                                Marketing For Industrial Products Is So Powerful</a></h5>
-                        <div class="post-meta d-flex justify-content-between mt-3">
-                            <a [routerLink]="['/industrial-marketing-power']" class="text-muted readmore">Read More <i
-                                    class="uil uil-angle-right-b align-middle"></i></a>
+                        <div class="event-meta d-flex flex-wrap">
+                            <span class="text-muted me-3"><i class="uil uil-clock me-1"></i> 9:00 AM - 12:00 PM</span>
+                            <span class="text-muted"><i class="uil uil-map-marker me-1"></i> Main Auditorium</span>
+                        </div>
+                        <h5><a href="#" class="card-title title text-dark hover-text-primary">Heart Health Awareness Seminar</a></h5>
+                        <p class="text-muted">Learn about cardiovascular health, prevention strategies, and new treatments from our cardiology team.</p>
+                        <div class="post-meta d-flex justify-content-between mt-3 align-items-center">
+                            <span class="badge bg-soft-primary rounded-pill">Cardiology</span>
+                            <a href="#" class="btn btn-sm btn-soft-primary">Register Now <i class="uil uil-arrow-right align-middle"></i></a>
                         </div>
                     </div>
                 </div>
             </div><!--end col-->
 
-
-
+            <!-- Event 2 -->
             <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                <div class="card blog blog-primary rounded border-0 shadow overflow-hidden" [routerLink]="['/ai-tools']"
-                    style="cursor: pointer;">
-                    <div class="position-relative">
-                        <img src="./images/blog/blog2.jpg" class="card-img-top" alt="...">
-                        <div class="overlay rounded-top"></div>
+                <div class="card event rounded border-0 shadow overflow-hidden transition hover:shadow-lg">
+                    <div class="position-relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="card-img-top transition hover:scale-105" alt="Diabetes Screening">
+                        <div class="event-date bg-primary text-white">
+                            <h5 class="day mb-0">22</h5>
+                            <span class="month">JUN</span>
+                        </div>
+                        <div class="event-category bg-success text-white shadow">Free Tests</div>
                     </div>
                     <div class="card-body content">
-                        <h5><a href="javascript:void(0)" class="card-title title text-dark">Unleashing the Power of AI:
-                                The Best AI Tools for Digital
-                                Marketing in 2025</a></h5>
-                        <div class="post-meta d-flex justify-content-between mt-3">
-                            
-                            <a  class="text-muted readmore">Read More <i
-                                    class="uil uil-angle-right-b align-middle"></i></a>
+                        <div class="event-meta d-flex flex-wrap">
+                            <span class="text-muted me-3"><i class="uil uil-clock me-1"></i> 8:00 AM - 4:00 PM</span>
+                            <span class="text-muted"><i class="uil uil-map-marker me-1"></i> Outpatient Clinic</span>
+                        </div>
+                        <h5><a href="#" class="card-title title text-dark hover-text-primary">Free Diabetes Screening Camp</a></h5>
+                        <p class="text-muted">Get free blood sugar tests and consultation with our endocrinology specialists. Early detection saves lives.</p>
+                        <div class="post-meta d-flex justify-content-between mt-3 align-items-center">
+                            <span class="badge bg-soft-primary rounded-pill">Endocrinology</span>
+                            <a href="#" class="btn btn-sm btn-soft-primary">More Details <i class="uil uil-arrow-right align-middle"></i></a>
                         </div>
                     </div>
-                    
                 </div>
             </div><!--end col-->
 
-
-
-
+            <!-- Event 3 -->
             <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                <div class="card blog blog-primary rounded border-0 shadow overflow-hidden"
-                    [routerLink]="['/healthcare-social-media']" style="cursor: pointer;">
-                    <div class="position-relative">
-                        <img src="./images/blog/blog3.jpg" class="card-img-top" alt="...">
-                        <div class="overlay rounded-top"></div>
+                <div class="card event rounded border-0 shadow overflow-hidden transition hover:shadow-lg">
+                    <div class="position-relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="card-img-top transition hover:scale-105" alt="Prenatal Class">
+                        <div class="event-date bg-primary text-white">
+                            <h5 class="day mb-0">05</h5>
+                            <span class="month">JUL</span>
+                        </div>
+                        <div class="event-category bg-info text-white shadow">Workshop</div>
                     </div>
                     <div class="card-body content">
-                        <h5><a href="javascript:void(0)" class="card-title title text-dark">4 Best Practices to Elevate
-                                Your Healthcare Marketing with
-                                Social Media</a></h5>
-                        <div class="post-meta d-flex justify-content-between mt-3">
-                           
-                            <a  class="text-muted readmore">Read More <i
-                                    class="uil uil-angle-right-b align-middle"></i></a>
+                        <div class="event-meta d-flex flex-wrap">
+                            <span class="text-muted me-3"><i class="uil uil-clock me-1"></i> 10:00 AM - 12:00 PM</span>
+                            <span class="text-muted"><i class="uil uil-map-marker me-1"></i> Maternity Wing</span>
+                        </div>
+                        <h5><a href="#" class="card-title title text-dark hover-text-primary">Prenatal Care Workshop</a></h5>
+                        <p class="text-muted">Essential information for expectant mothers about pregnancy, delivery, and newborn care from our OB/GYN team.</p>
+                        <div class="post-meta d-flex justify-content-between mt-3 align-items-center">
+                            <span class="badge bg-soft-primary rounded-pill">Obstetrics</span>
+                            <a href="#" class="btn btn-sm btn-soft-primary">Join Now <i class="uil uil-arrow-right align-middle"></i></a>
                         </div>
                     </div>
-                    
                 </div>
             </div><!--end col-->
 
-
-
-
+            <!-- Event 4 -->
             <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                <div class="card blog blog-primary rounded border-0 shadow overflow-hidden" [routerLink]="['/gpt4o']"
-                    style="cursor: pointer;">
-                    <div class="position-relative">
-                        <img src="./images/blog/blog4.jpg" class="card-img-top" alt="...">
-                        <div class="overlay rounded-top"></div>
+                <div class="card event rounded border-0 shadow overflow-hidden transition hover:shadow-lg">
+                    <div class="position-relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="card-img-top transition hover:scale-105" alt="Cancer Awareness">
+                        <div class="event-date bg-primary text-white">
+                            <h5 class="day mb-0">12</h5>
+                            <span class="month">JUL</span>
+                        </div>
+                        <div class="event-category bg-warning text-white shadow">Expert Panel</div>
                     </div>
                     <div class="card-body content">
-                        <h5><a href="javascript:void(0)" class="card-title title text-dark">Chat GPT-4o: OpenAI's
-                                Next-Generation AI</a></h5>
-                        <div class="post-meta d-flex justify-content-between mt-3">
-                            
-                            <a  class="text-muted readmore">Read More <i
-                                    class="uil uil-angle-right-b align-middle"></i></a>
+                        <div class="event-meta d-flex flex-wrap">
+                            <span class="text-muted me-3"><i class="uil uil-clock me-1"></i> 6:00 PM - 8:00 PM</span>
+                            <span class="text-muted"><i class="uil uil-map-marker me-1"></i> Conference Hall</span>
+                        </div>
+                        <h5><a href="#" class="card-title title text-dark hover-text-primary">Cancer Prevention & Early Detection</a></h5>
+                        <p class="text-muted">Learn about risk factors, screening options, and prevention strategies from our oncology team specialists.</p>
+                        <div class="post-meta d-flex justify-content-between mt-3 align-items-center">
+                            <span class="badge bg-soft-primary rounded-pill">Oncology</span>
+                            <a href="#" class="btn btn-sm btn-soft-primary">Register <i class="uil uil-arrow-right align-middle"></i></a>
                         </div>
                     </div>
-                    
                 </div>
             </div><!--end col-->
 
-
-
-
+            <!-- Event 5 -->
             <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                <div class="card blog blog-primary rounded border-0 shadow overflow-hidden"
-                    [routerLink]="['/healthcare-industry']" style="cursor: pointer;">
-                    <div class="position-relative">
-                        <img src="./images/blog/blog5.jpg" class="card-img-top" alt="...">
-                        <div class="overlay rounded-top"></div>
+                <div class="card event rounded border-0 shadow overflow-hidden transition hover:shadow-lg">
+                    <div class="position-relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1599458252573-56ae36120de1?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="card-img-top transition hover:scale-105" alt="Mental Health">
+                        <div class="event-date bg-primary text-white">
+                            <h5 class="day mb-0">19</h5>
+                            <span class="month">JUL</span>
+                        </div>
+                        <div class="event-category bg-purple text-white shadow">Support Group</div>
                     </div>
                     <div class="card-body content">
-                        <h5><a href="javascript:void(0)" class="card-title title text-dark">How Digital Marketing is
-                                Revolutionizing the Healthcare
-                                Industry</a></h5>
-                        <div class="post-meta d-flex justify-content-between mt-3">
-                           
-                            <a  class="text-muted readmore">Read More <i
-                                    class="uil uil-angle-right-b align-middle"></i></a>
+                        <div class="event-meta d-flex flex-wrap">
+                            <span class="text-muted me-3"><i class="uil uil-clock me-1"></i> 5:30 PM - 7:30 PM</span>
+                            <span class="text-muted"><i class="uil uil-map-marker me-1"></i> Wellness Center</span>
+                        </div>
+                        <h5><a href="#" class="card-title title text-dark hover-text-primary">Mental Health Awareness Session</a></h5>
+                        <p class="text-muted">Understanding stress, anxiety, and depression with strategies for mental wellbeing from our psychiatry team.</p>
+                        <div class="post-meta d-flex justify-content-between mt-3 align-items-center">
+                            <span class="badge bg-soft-primary rounded-pill">Psychiatry</span>
+                            <a href="#" class="btn btn-sm btn-soft-primary">Details <i class="uil uil-arrow-right align-middle"></i></a>
                         </div>
                     </div>
-                    
                 </div>
             </div><!--end col-->
 
-
-
-
+            <!-- Event 6 -->
             <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                <div class="card blog blog-primary rounded border-0 shadow overflow-hidden"
-                    [routerLink]="['/e-commerce-business']" style="cursor: pointer;">
-                    <div class="position-relative">
-                        <img src="./images/blog/blog6.jpg" class="card-img-top" alt="...">
-                        <div class="overlay rounded-top"></div>
+                <div class="card event rounded border-0 shadow overflow-hidden transition hover:shadow-lg">
+                    <div class="position-relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1473187983305-f615310e7daa?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="card-img-top transition hover:scale-105" alt="Senior Health">
+                        <div class="event-date bg-primary text-white">
+                            <h5 class="day mb-0">26</h5>
+                            <span class="month">JUL</span>
+                        </div>
+                        <div class="event-category bg-orange text-white shadow">Health Fair</div>
                     </div>
                     <div class="card-body content">
-                        <h5><a href="javascript:void(0)" class="card-title title text-dark">How Digital Marketing Fuels
-                                Your E-commerce Business</a></h5>
-                        <div class="post-meta d-flex justify-content-between mt-3">
-                            
-                            <a  class="text-muted readmore">Read More <i
-                                    class="uil uil-angle-right-b align-middle"></i></a>
+                        <div class="event-meta d-flex flex-wrap">
+                            <span class="text-muted me-3"><i class="uil uil-clock me-1"></i> 10:00 AM - 2:00 PM</span>
+                            <span class="text-muted"><i class="uil uil-map-marker me-1"></i> Geriatric Center</span>
+                        </div>
+                        <h5><a href="#" class="card-title title text-dark hover-text-primary">Senior Health & Wellness Day</a></h5>
+                        <p class="text-muted">Comprehensive health checks and consultations for seniors aged 60+. Includes bone density tests and nutrition advice.</p>
+                        <div class="post-meta d-flex justify-content-between mt-3 align-items-center">
+                            <span class="badge bg-soft-primary rounded-pill">Geriatrics</span>
+                            <a href="#" class="btn btn-sm btn-soft-primary">Join <i class="uil uil-arrow-right align-middle"></i></a>
                         </div>
                     </div>
-                    
                 </div>
             </div><!--end col-->
+        </div><!--end row-->
 
-
-
-
-            <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                <div class="card blog blog-primary rounded border-0 shadow overflow-hidden"
-                    [routerLink]="['/website-dream-team']" style="cursor: pointer;">
-                    <div class="position-relative">
-                        <img src="./images/blog/blog7.jpg" class="card-img-top" alt="...">
-                        <div class="overlay rounded-top"></div>
-                    </div>
-                    <div class="card-body content">
-                        <h5><a href="javascript:void(0)" class="card-title title text-dark">Why SEO & UX Are Your
-                                Website's Dream Team</a></h5>
-                        <div class="post-meta d-flex justify-content-between mt-3">
-                           
-                            <a  class="text-muted readmore">Read More <i
-                                    class="uil uil-angle-right-b align-middle"></i></a>
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <div class="card border-0 shadow rounded overflow-hidden bg-gradient-primary">
+                    <div class="card-body p-5 position-relative">
+                        <div class="bg-pattern"></div>
+                        <div class="position-relative">
+                            <h4 class="text-white mb-4">Can't find what you're looking for?</h4>
+                            <p class="text-white-75 mb-4">We regularly organize health camps, vaccination drives, and specialty workshops. Contact us for information about upcoming events.</p>
+                            <a href="#contact" class="btn btn-light">Contact Our Events Team</a>
                         </div>
                     </div>
-                    
                 </div>
-            </div><!--end col-->
+            </div>
+        </div>
+    </div><!--end container-->
+</section><!--end section-->
+<!-- Events End -->
 
-
-
-            <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                <div class="card blog blog-primary rounded border-0 shadow overflow-hidden"
-                    [routerLink]="['/professional-product-photography']" style="cursor: pointer;">
-                    <div class="position-relative">
-                        <img src="./images/blog/blog8.jpg" class="card-img-top" alt="...">
-                        <div class="overlay rounded-top"></div>
+<!-- CTA Start -->
+<section class="section bg-light" id="contact">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <div class="section-title">
+                    <h4 class="title mb-4">Host Your Event With Us</h4>
+                    <p class="text-muted para-desc mx-auto">Our hospital facilities are available for community health events, educational programs, and nonprofit organization meetings.</p>
+                    <div class="mt-4">
+                        <a href="tel:+15253446869" class="btn btn-primary me-2 mt-2"><i class="uil uil-phone me-1"></i> Call (525) 344-6869</a>
+                        <a href="mailto:events@hospital.com" class="btn btn-outline-primary mt-2"><i class="uil uil-envelope me-1"></i> Email Us</a>
                     </div>
-                    <div class="card-body content">
-                        <h5><a href="javascript:void(0)" class="card-title title text-dark">The Power of Professional
-                                Product Photography: Sell More,
-                                Look Better!</a></h5>
-                        <div class="post-meta d-flex justify-content-between mt-3">
-                            
-                            <a  class="text-muted readmore">Read More <i
-                                    class="uil uil-angle-right-b align-middle"></i></a>
-                        </div>
-                    </div>
-                    
                 </div>
             </div><!--end col-->
         </div><!--end row-->
     </div><!--end container-->
 </section><!--end section-->
-<!-- Blog End -->
+<!-- CTA End -->
+

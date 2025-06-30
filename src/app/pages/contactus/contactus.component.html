@@ -1,12 +1,11 @@
 <!-- Hero Start -->
-<section class="bg-half-170 d-table w-100"
-    style="background: url('./images/creative_bulb/bulb_creative_8.jpg');background-position: 0px -100px;">
-    <div class="bg-overlay"></div>
+<section class="bg-half-170 d-table w-100" style="background: url('./images/hospital-bg.jpg');background-position: center;">
+    <div class="bg-overlay bg-hospital-overlay"></div>
     <div class="container">
         <div class="row mt-5 justify-content-center">
             <div class="col-lg-12 text-center">
                 <div class="pages-heading">
-                    <h4 class="title mb-0 text-white">Support</h4>
+                    <h4 class="title mb-0 text-white">Patient Care Center</h4>
                 </div>
             </div> <!--end col-->
         </div><!--end row-->
@@ -15,7 +14,7 @@
             <nav aria-label="breadcrumb" class="d-inline-block">
                 <ul class="breadcrumb rounded shadow mb-0 px-4 py-2">
                     <li class="breadcrumb-item"><a [routerLink]="['/home']">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Support</li>
+                    <li class="breadcrumb-item active" aria-current="page">Contact & Appointments</li>
                 </ul>
             </nav>
         </div>
@@ -33,14 +32,14 @@
 </div>
 <!--Shape End-->
 
-<!-- Start Contact -->
+<!-- Start Contact & Appointment Section -->
 <section class="section">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-6 mt-4 pt-2">
+            <div class="col-lg-5 col-md-6 mt-4 pt-2">
                 <div class="card shadow rounded border-0">
                     <div class="card-body py-5">
-                        <h4 class="card-title">Get In Touch !</h4>
+                        <h4 class="card-title">Book an Appointment</h4>
                         
                         <!-- Notification Popup -->
                         <div *ngIf="showPopup" class="alert alert-dismissible fade show" 
@@ -54,7 +53,7 @@
                         </div>
                         
                         <div class="custom-form mt-3">
-                            <form #contactForm="ngForm" (ngSubmit)="sendEmail()">
+                            <form #appointmentForm="ngForm" (ngSubmit)="submitAppointment()">
                                 <div class="row">
                                     <div class="col-md-12 mb-3">
                                         <label class="form-label">Full Name</label>
@@ -62,8 +61,8 @@
                                             <i data-feather="user" class="feather-icon"></i>
                                             <input name="name" id="name" type="text" 
                                                 class="form-control ps-5" 
-                                                [(ngModel)]="formData.name"
-                                                placeholder="Enter your name">
+                                                [(ngModel)]="appointmentData.name"
+                                                placeholder="Patient's full name" required>
                                         </div>
                                     </div>
 
@@ -71,33 +70,62 @@
                                         <label class="form-label">Email Address</label>
                                         <div class="form-icon position-relative">
                                             <i data-feather="mail" class="feather-icon"></i>
-                                            <input name="useremail" id="useremail" type="email" 
+                                            <input name="email" id="email" type="email" 
                                                 class="form-control ps-5" 
-                                                [(ngModel)]="formData.useremail"
-                                                placeholder="Email :">
+                                                [(ngModel)]="appointmentData.email"
+                                                placeholder="Email address" required>
                                         </div>
                                     </div>
 
                                     <div class="col-md-12 mb-3">
-                                        <label class="form-label">Mobile Number</label>
+                                        <label class="form-label">Phone Number</label>
                                         <div class="form-icon position-relative">
-                                            <i data-feather="phone-call" class="feather-icon"></i>
-                                            <input name="mobile" id="mobile" type="tel" 
+                                            <i data-feather="phone" class="feather-icon"></i>
+                                            <input name="phone" id="phone" type="tel" 
                                                 class="form-control ps-5" 
-                                                [(ngModel)]="formData.mobile"
-                                                placeholder="Phone :">
+                                                [(ngModel)]="appointmentData.phone"
+                                                placeholder="Contact number" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Appointment Date</label>
+                                        <div class="form-icon position-relative">
+                                            <i data-feather="calendar" class="feather-icon"></i>
+                                            <input name="date" id="date" type="date" 
+                                                class="form-control ps-5" 
+                                                [(ngModel)]="appointmentData.date"
+                                                required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Department</label>
+                                        <div class="form-icon position-relative">
+                                            <i data-feather="clipboard" class="feather-icon"></i>
+                                            <select name="department" id="department" 
+                                                class="form-select ps-5" 
+                                                [(ngModel)]="appointmentData.department"
+                                                required>
+                                                <option value="">Select Department</option>
+                                                <option value="cardiology">Cardiology</option>
+                                                <option value="neurology">Neurology</option>
+                                                <option value="pediatrics">Pediatrics</option>
+                                                <option value="orthopedics">Orthopedics</option>
+                                                <option value="general">General Medicine</option>
+                                            </select>
                                         </div>
                                     </div>
 
                                     <div class="col-12">
                                         <div class="mb-3">
-                                            <label class="form-label">Message</label>
+                                            <label class="form-label">Symptoms/Reason</label>
                                             <div class="form-icon position-relative">
-                                                <i data-feather="message-circle" class="feather-icon"></i>
-                                                <textarea name="message" id="message" rows="4" 
+                                                <i data-feather="alert-circle" class="feather-icon"></i>
+                                                <textarea name="message" id="message" rows="3" 
                                                         class="form-control ps-5" 
-                                                        [(ngModel)]="formData.message"
-                                                        placeholder="Message :"></textarea>
+                                                        [(ngModel)]="appointmentData.message"
+                                                        placeholder="Briefly describe your symptoms or reason for visit"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -105,9 +133,8 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="d-grid">
-                                            <button type="submit" id="submit" name="send" 
-                                                    class="btn btn-primary">
-                                                Send Message
+                                            <button type="submit" class="btn btn-primary">
+                                                <i class="uil uil-calendar-alt me-1"></i> Book Appointment
                                             </button>
                                         </div>
                                     </div>
@@ -118,12 +145,12 @@
                 </div>
             </div>
 
-            <div class="col-lg-8 col-md-6 ps-md-3 pe-md-3 mt-4 pt-2">
-                <div class="card map map-height-two rounded map-gray border-0">
+            <div class="col-lg-7 col-md-6 ps-md-3 pe-md-3 mt-4 pt-2">
+                <div class="card map map-height-two rounded border-0">
                     <div class="card-body p-0">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3397.4405107559105!2d73.77210537469534!3d18.596612282511728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8a16d41ba8ebfc67%3A0xc944b0e5befaf10d!2sOnella%20Soft!5e1!3m2!1sen!2sin!4v1749564121327!5m2!1sen!2sin"
-                            style="border:0" class="rounded" allowfullscreen="" allowfullscreen="" loading="lazy"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343008!2d-74.00425872426692!3d40.74076987932881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bf5c1654f3%3A0xc80f9cfce5383d5d!2sMadison%20Square%20Garden!5e0!3m2!1sen!2sus!4v1623251016929!5m2!1sen!2sus"
+                            style="border:0" class="rounded" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
@@ -136,12 +163,12 @@
             <div class="col-md-4">
                 <div class="card border-0 text-center features feature-primary feature-clean">
                     <div class="icons text-center mx-auto">
-                        <i class="uil uil-phone rounded h3 mb-0"></i>
+                        <i class="uil uil-phone-alt rounded h3 mb-0"></i>
                     </div>
                     <div class="content mt-4">
-                        <h5 class="fw-bold">Phone</h5>
-                        <p class="text-muted">Start working with Onella Soft that can provide everything</p>
-                        <a href="tel:+152534-468-854" class="read-more">+152 534-468-854</a>
+                        <h5 class="fw-bold">Emergency Contact</h5>
+                        <p class="text-muted">24/7 emergency services available</p>
+                        <a href="tel:+911234567890" class="read-more">+91 123 456 7890</a>
                     </div>
                 </div>
             </div><!--end col-->
@@ -149,12 +176,12 @@
             <div class="col-md-4 mt-4 mt-sm-0 pt-2 pt-sm-0">
                 <div class="card border-0 text-center features feature-primary feature-clean">
                     <div class="icons text-center mx-auto">
-                        <i class="uil uil-envelope rounded h3 mb-0"></i>
+                        <i class="uil uil-envelope-edit rounded h3 mb-0"></i>
                     </div>
                     <div class="content mt-4">
-                        <h5 class="fw-bold">Email</h5>
-                        <p class="text-muted">Start working with Onella Soft that can provide everything</p>
-                        <a href="" class="read-more">contactexample.com</a>
+                        <h5 class="fw-bold">Email Us</h5>
+                        <p class="text-muted">For general inquiries and non-urgent matters</p>
+                        <a href="mailto:infohospitalname.com" class="read-more">infohospitalname.com</a>
                     </div>
                 </div>
             </div><!--end col-->
@@ -162,17 +189,40 @@
             <div class="col-md-4 mt-4 mt-sm-0 pt-2 pt-sm-0">
                 <div class="card border-0 text-center features feature-primary feature-clean">
                     <div class="icons text-center mx-auto">
-                        <i class="uil uil-map-marker rounded h3 mb-0"></i>
+                        <i class="uil uil-hospital rounded h3 mb-0"></i>
                     </div>
                     <div class="content mt-4">
-                        <h5 class="fw-bold">Location</h5>
-                        <p class="text-muted">C/54 Northwest Freeway, Suite 558, <br>Houston, USA 485</p>
-                        <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39206.002432144705!2d-95.4973981212445!3d29.709510002925988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c16de81f3ca5%3A0xf43e0b60ae539ac9!2sGerald+D.+Hines+Waterwall+Park!5e0!3m2!1sen!2sin!4v1566305861440!5m2!1sen!2sin"
-                            data-type="iframe" class="video-play-icon read-more lightbox">View on Google map</a>
+                        <h5 class="fw-bold">Visit Us</h5>
+                        <p class="text-muted">123 Medical Center Drive<br>Health City, HC 12345</p>
+                        <a href="#" class="read-more">Get Directions</a>
                     </div>
                 </div>
             </div><!--end col-->
         </div><!--end row-->
+
+        <div class="row mt-5 pt-4">
+            <div class="col-12 text-center">
+                <h4 class="mb-4">Hospital Hours</h4>
+                <div class="card border-0 shadow rounded">
+                    <div class="card-body p-4">
+                        <ul class="list-unstyled mb-0">
+                            <li class="d-flex justify-content-between py-2 border-bottom">
+                                <span class="fw-bold">Monday - Friday</span>
+                                <span>8:00 AM - 8:00 PM</span>
+                            </li>
+                            <li class="d-flex justify-content-between py-2 border-bottom">
+                                <span class="fw-bold">Saturday</span>
+                                <span>9:00 AM - 5:00 PM</span>
+                            </li>
+                            <li class="d-flex justify-content-between py-2">
+                                <span class="fw-bold">Sunday & Holidays</span>
+                                <span>Emergency Only</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div><!--end container-->
 </section><!--end section-->
-<!-- End contact -->
+<!-- End Contact & Appointment Section -->
