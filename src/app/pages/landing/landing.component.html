@@ -1,466 +1,608 @@
-<!-- Hero Start -->
-<section class="bg-half-100 d-table w-100 it-home" style="background: url('./images/bg1.jpg') center center;">
-    <div class="bg-overlay"></div>
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-7 col-md-6 col-12">
-                <div class="title-heading">
-                    <h6 class="text-white-50">Grow Your Business with</h6>
-                    <h1 class="fw-bold text-white title-dark mt-2 mb-3">Expert Digital Marketing Solutions</h1>
-                    <p class="para-desc text-white-50">generate more leads, boost sales, or enhance your brand's online
-                        visibility, with our experienced digital marketing specialists</p>
-                    <div class="mt-4 pt-2">
-                        <a [routerLink]="['/about']" class="btn btn-primary m-1"><i class="uil uil-users-alt"></i> Meet
-                            Us</a>
-                        <a [routerLink]="['/overview']" class="mt-3 ms-3 h6 text-white">Explore Onella <i
-                                class="uil uil-angle-right-b"></i></a>
-                        <small class="fw-bold text-uppercase text-white-50 align-middle ms-1"></small>
-                    </div>
+<!-- Hero Section with Animated Background -->
+<section class="hero-section position-relative overflow-hidden">
+    <div class="hero-background"></div>
+    <div class="container position-relative z-index-1">
+        <div class="row min-vh-80 align-items-center py-5">
+            <div class="col-lg-8 text-center text-lg-start">
+                <h1 class="hero-title display-3 fw-bold mb-4">Your Trusted Partner in <span
+                        class="text-gradient-primary">Diabetes Management</span></h1>
+                <p class="hero-subtitle lead mb-5">Comprehensive diabetes care with cutting-edge technology and
+                    compassionate specialists</p>
+                <div class="d-flex justify-content-center justify-content-lg-start gap-3 flex-wrap">
+                    <a href="#" class="btn btn-primary btn-lg rounded-pill px-4 shadow-sm">
+                        <i class="fas fa-calendar-check me-2"></i>Book an Appointment
+                    </a>
+                    <a href="#" class="btn btn-outline-light btn-lg rounded-pill px-4">
+                        <i class="fas fa-phone-alt me-2"></i>Emergency Contact
+                    </a>
                 </div>
-            </div><!--end col-->
+            </div>
+        </div>
+    </div>
+    <div class="hero-shape-bottom">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+            <path class="shape-fill" d="M0,6V0h1000v100L0,6z"></path>
+        </svg>
+    </div>
+</section>
 
-            <div class="col-lg-5 col-md-6 mt-4 pt-2 mt-sm-0 pt-sm-0">
-                <div class="card shadow rounded border-0 ms-lg-5">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">Register Your Appointment</h5>
-                        <h6>We here to help you 24/7 with experts</h6>
-                        <form class="login-form" method="post" name="myForm" id="myForm" (submit)="sendEmail($event)">
-                            <p id="error-msg" class="mb-0"></p>
-                            <div id="simple-msg"></div>
-                            <div class="row">
-                                <div class="col-md-12 mb-3">
-                                    <label class="form-label">Full Name <span class="text-danger">*</span></label>
-                                    <div class="form-icon position-relative">
-                                        <i data-feather="user" class="fea icon-sm icons"></i>
-                                        <input name="name" id="name" type="text" class="form-control ps-5"
-                                            placeholder="Enter your name">
-                                    </div>
-                                </div>
+<!-- Quick Access Links - Card Hover Effect -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-3 col-sm-6">
+                <div class="card quick-access-card text-center p-4 h-100 border-0 shadow-sm hover-effect">
+                    <div class="quick-access-icon bg-primary bg-opacity-10 text-primary">
+                        <i class="fas fa-calendar-check fa-2x"></i>
+                    </div>
+                    <h5 class="mt-4">Online Appointment</h5>
+                    <p class="text-muted">Book your consultation with our specialists</p>
+                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill mt-auto">Book Now</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="card quick-access-card text-center p-4 h-100 border-0 shadow-sm hover-effect">
+                    <div class="quick-access-icon bg-danger bg-opacity-10 text-danger">
+                        <i class="fas fa-phone-alt fa-2x"></i>
+                    </div>
+                    <h5 class="mt-4">Emergency Helpline</h5>
+                    <p class="text-muted">24/7 support for diabetes emergencies</p>
+                    <a href="#" class="btn btn-sm btn-outline-danger rounded-pill mt-auto">Call Now</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="card quick-access-card text-center p-4 h-100 border-0 shadow-sm hover-effect">
+                    <div class="quick-access-icon bg-success bg-opacity-10 text-success">
+                        <i class="fas fa-user-md fa-2x"></i>
+                    </div>
+                    <h5 class="mt-4">Find a Doctor</h5>
+                    <p class="text-muted">Connect with our diabetes specialists</p>
+                    <a href="#" class="btn btn-sm btn-outline-success rounded-pill mt-auto">Find Now</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="card quick-access-card text-center p-4 h-100 border-0 shadow-sm hover-effect">
+                    <div class="quick-access-icon bg-info bg-opacity-10 text-info">
+                        <i class="fas fa-sign-in-alt fa-2x"></i>
+                    </div>
+                    <h5 class="mt-4">Patient Login</h5>
+                    <p class="text-muted">Access your medical records online</p>
+                    <a href="#" class="btn btn-sm btn-outline-info rounded-pill mt-auto">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-                                <div class="col-md-12 mb-3">
-                                    <label class="form-label">Email Address<span class="text-danger">*</span></label>
-                                    <div class="form-icon position-relative">
-                                        <i data-feather="mail" class="fea icon-sm icons"></i>
-                                        <input name="useremail" id="useremail" type="email" class="form-control ps-5"
-                                            placeholder="Email :">
-                                    </div>
-                                </div><!--end col-->
+<!-- Services Offered - Modern Grid -->
+<section id="services" class="py-6 position-relative">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center">
+                <span class="badge bg-primary bg-opacity-10 text-primary mb-3">Our Services</span>
+                <h2 class="display-5 fw-bold mb-3">Comprehensive Diabetes Care Solutions</h2>
+                <p class="lead text-muted">From diagnosis to ongoing management, we provide specialized services
+                    tailored to your unique needs</p>
+            </div>
+        </div>
 
-                                <div class="col-md-12 mb-3">
-                                    <label class="form-label">Mobile Number <span class="text-danger">*</span></label>
-                                    <div class="form-icon position-relative">
-                                        <i data-feather="phone-call" class="fea icon-sm icons"></i>
-                                        <input name="mobile" id="mobile" type="number" class="form-control ps-5"
-                                            placeholder="Phone :">
-                                    </div>
-                                </div><!--end col-->
-
-                                <div class="col-12">
-                                    <div class="mb-3">
-                                        <label class="form-label">Message <span class="text-danger">*</span></label>
-                                        <div class="form-icon position-relative">
-                                            <i data-feather="message-circle" class="fea icon-sm icons clearfix"></i>
-                                            <textarea name="message" id="message" rows="4" class="form-control ps-5"
-                                                placeholder="Message :"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="card service-card h-100 border-0 shadow-sm overflow-hidden">
+                    <div class="service-card-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                                <i class="fas fa-vial text-primary"></i>
                             </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="d-grid">
-                                        <button type="submit" id="submit" name="send" class="btn btn-primary">Send
-                                            Message</button>
-                                    </div>
-                                </div><!--end col-->
-                            </div><!--end row-->
-                        </form>
-                    </div>
-                </div>
-            </div><!--end col-->
-
-            
-        </div><!--end row-->
-    </div> <!--end container-->
-</section><!--end section-->
-<!-- End Hero -->
-
-
-
-<!-- Partners start -->
-<section class="py-4 border-bottom">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-2 col-md-2 col-6 text-center py-4 "
-                style="animation-delay: 0.1s;">
-                <img src="./images/client/amazon.svg" class="avatar avatar-ex-sm hover-scale" alt="">
-            </div><!--end col-->
-
-            <div class="col-lg-2 col-md-2 col-6 text-center py-4 "
-                style="animation-delay: 0.2s;">
-                <img src="./images/client/google.svg" class="avatar avatar-ex-sm hover-scale" alt="">
-            </div><!--end col-->
-
-            <div class="col-lg-2 col-md-2 col-6 text-center py-4 "
-                style="animation-delay: 0.3s;">
-                <img src="./images/client/lenovo.svg" class="avatar avatar-ex-sm hover-scale" alt="">
-            </div><!--end col-->
-
-            <div class="col-lg-2 col-md-2 col-6 text-center py-4 "
-                style="animation-delay: 0.4s;">
-                <img src="./images/client/paypal.svg" class="avatar avatar-ex-sm hover-scale" alt="">
-            </div><!--end col-->
-
-            <div class="col-lg-2 col-md-2 col-6 text-center py-4 "
-                style="animation-delay: 0.5s;">
-                <img src="./images/client/shopify.svg" class="avatar avatar-ex-sm hover-scale" alt="">
-            </div><!--end col-->
-
-            <div class="col-lg-2 col-md-2 col-6 text-center py-4 "
-                style="animation-delay: 0.6s;">
-                <img src="./images/client/spotify.svg" class="avatar avatar-ex-sm hover-scale" alt="">
-            </div><!--end col-->
-        </div><!--end row-->
-    </div><!--end container-->
-</section><!--end section-->
-<!-- Partners End -->
-
-
-
-
-
-<!-- Services Section Start -->
-<section class="section bg-light">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-5 col-12 order-1 order-lg-2">
-                <div class="section-title text-center text-lg-start mb-4 mb-lg-0 pb-2 pb-lg-0">
-                    <span class="badge rounded-pill bg-soft-primary ">About Us</span>
-                    <h4 class="title mt-3 mb-4">Grow Your Business with Expert Digital Marketing Solutions</h4>
-                    <p class="text-muted para-desc mx-auto ms-lg-auto mb-0 ">
-                        Start working with <span class="text-primary fw-bold">Onella Soft</span> that can provide
-                        everything you need to generate awareness, drive traffic, connect.</p>
-                    <div class="mt-4 d-lg-block d-none Up ">
-                        <a [routerLink]="['/about']" class="btn btn-primary">Explore More <i class="uil uil-angle-right-b"></i></a>
-                    </div>
-                </div>
-            </div><!--end col-->
-
-            <div class="col-lg-7 col-12 order-2 order-lg-1">
-                <div class="row me-lg-5">
-                    <div class="col-md-6 col-12">
-                        <div class="row">
-                            <div class="col-12 mt-4 mt-lg-0 pt-2 pt-lg-0">
-                                <div
-                                    class="card border-0 text-center features feature-primary feature-clean course-feature p-4 overflow-hidden shadow Left hover-float">
-                                    <div class="icons text-center mx-auto">
-                                        <i class="uil uil-sliders-v d-block rounded-pill h3 mb-0"></i>
-                                    </div>
-                                    <div class="card-body p-0 mt-4">
-                                        <a href="javascript:void(0)" class="title h5 text-dark">Customized Strategies</a>
-                                        <p class="text-muted mt-2 mb-0">Tailored strategies crafted uniquely for your business goals—never generic</p>
-                                        <i class="uil uil-sliders-v full-img"></i>
-                                    </div>
-                                </div>
-                            </div><!--end col-->
-
-                            <div class="col-12 mt-4 pt-2">
-                                <div
-                                    class="card border-0 text-center features feature-primary feature-clean course-feature p-4 overflow-hidden shadow Left hover-float">
-                                    <div class="icons text-center mx-auto">
-                                        <i class="uil uil-eye d-block rounded-pill h3 mb-0"></i>
-                                    </div>
-                                    <div class="card-body p-0 mt-4">
-                                        <a href="javascript:void(0)" class="title h5 text-dark">Targeted High-quality Leads</a>
-                                        <p class="text-muted mt-2 mb-0">Boost traffic, leads, sales, and visibility with expert digital marketers</p>
-                                        <i class="uil uil-target full-img"></i>
-                                    </div>
-                                </div>
-                            </div><!--end col-->
-                        </div><!--end Row-->
-                    </div><!--end col-->
-
-                    <div class="col-md-6 col-12">
-                        <div class="row pt-lg-4 mt-lg-4">
-                            <div class="col-12 mt-4 pt-2">
-                                <div
-                                    class="card border-0 text-center features feature-primary feature-clean course-feature p-4 overflow-hidden shadow Right hover-float">
-                                    <div class="icons text-center mx-auto">
-                                        <i class="uil uil-focus d-block rounded-pill h3 mb-0"></i>
-                                    </div>
-                                    <div class="card-body p-0 mt-4">
-                                        <a href="javascript:void(0)" class="title h5 text-dark">Client-Centric Focus</a>
-                                        <p class="text-muted mt-2 mb-0">Your success drives us—supportive, aligned, refined strategies for leads</p>
-                                        <i class="uil uil-focus full-img"></i>
-                                    </div>
-                                </div>
-                            </div><!--end col-->
-
-                            <div class="col-12 mt-4 pt-2">
-                                <div
-                                    class="card border-0 text-center features feature-primary feature-clean course-feature p-4 overflow-hidden shadow Right hover-float">
-                                    <div class="icons text-center mx-auto">
-                                        <i class="uil uil-users-alt d-block rounded-pill h3 mb-0"></i>
-                                    </div>
-                                    <div class="card-body p-0 mt-4">
-                                        <a href="javascript:void(0)" class="title h5 text-dark">Experienced Team</a>
-                                        <p class="text-muted mt-2 mb-0">Certified experts mastering trends, algorithms, and lead generation strategies daily</p>
-                                        <i class="uil uil-handshake full-img"></i>
-                                    </div>
-                                </div>
-                            </div><!--end col-->
-                        </div><!--end Row-->
-                    </div><!--end col-->
-                </div><!--end Row-->
-
-                <div class="mt-4 d-lg-none d-block text-center Up ">
-                    <a href="javascript:void(0)" class="btn btn-primary btn-hover-animate">See more</a>
-                </div>
-            </div><!--end col-->
-        </div><!--end row-->
-    </div><!--end container-->
-
-</section><!--end section-->
-<!-- Services Section End -->
-<!-- Testimonial start here -->
-<!-- <section class="section">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-4 col-12">
-                <div class="sticky-bar">
-                    <div class="section-title text-lg-start text-center mb-4 mb-lg-0 pb-2 pb-lg-0">
-                        <h6 class="text-primary">Reviews</h6>
-                        <h4 class="title mb-4">People love us</h4>
-                        <p class="text-muted para-desc mb-0 mx-auto">Start working with <span
-                                class="text-primary fw-bold">Onell Soft</span> that can provide everything you need to
-                            generate awareness, drive traffic, connect.</p>
+                            <h4 class="mb-0">Diabetes Diagnosis & Screening</h4>
+                        </div>
+                        <p class="text-muted">Comprehensive testing and early detection programs for diabetes and
+                            pre-diabetes using advanced diagnostic tools.</p>
+                        <a href="#" class="btn btn-link text-primary ps-0">Learn More <i
+                                class="fas fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-8 col-12">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-12 mt-4 mt-lg-0 pt-2 pt-lg-0">
-                                <div class="d-flex client-testi">
-                                    <img src="./images/clients/ameet_patel.jpeg"
-                                        class="avatar avatar-small client-image rounded shadow" alt="">
-                                    <div class="card flex-1 content p-3 shadow rounded position-relative">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                        </ul>
-                                        <p class="text-muted mt-2">" Absolutely thrilled with the results! Our website traffic and conversions have never been higher. Onella soft is truly a game-changer. "</p>
-                                        <h6 class="text-primary">- Vice President </h6>
-                                    </div>
-                                </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card service-card h-100 border-0 shadow-sm overflow-hidden">
+                    <div class="service-card-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                                <i class="fas fa-stethoscope text-primary"></i>
                             </div>
+                            <h4 class="mb-0">Endocrinology & Diabetology</h4>
+                        </div>
+                        <p class="text-muted">Specialized care for all types of diabetes and related endocrine disorders
+                            with personalized treatment plans.</p>
+                        <a href="#" class="btn btn-link text-primary ps-0">Learn More <i
+                                class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
 
-                            <div class="col-12 mt-4 pt-2">
-                                <div class="d-flex client-testi">
-                                    <img src="./images/clients/schin_first_step.jpeg"
-                                        class="avatar avatar-small client-image rounded shadow" alt="">
-                                    <div class="card flex-1 content p-3 shadow rounded position-relative">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                        </ul>
-                                        <p class="text-muted mt-2">"Our social media engagement has skyrocketed since partnering with them. Their content creation and campaign management are superb"</p>
-                                        <h6 class="text-primary">- Founder
-                                        </h6>
-                                    </div>
-                                </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card service-card h-100 border-0 shadow-sm overflow-hidden">
+                    <div class="service-card-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1630&q=80');">
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                                <i class="fas fa-syringe text-primary"></i>
                             </div>
-                            
-                            <div class="col-12 mt-4 pt-2">
-                                <div class="d-flex client-testi">
-                                    <img src="./images/client/05.jpg"
-                                        class="avatar avatar-small client-image rounded shadow" alt="">
-                                    <div class="card flex-1 content p-3 shadow rounded position-relative">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                        </ul>
-                                        <p class="text-muted mt-2">"Professional, responsive, and highly effective. They understood our goals perfectly and delivered beyond expectations. Highly recommend "</p>
-                                        <h6 class="text-primary">- Dean Tolle <small
-                                                class="text-muted">Developer</small></h6>
-                                    </div>
-                                </div>
+                            <h4 class="mb-0">Insulin Therapy Management</h4>
+                        </div>
+                        <p class="text-muted">Personalized insulin regimens and advanced delivery systems including
+                            pumps and smart pens.</p>
+                        <a href="#" class="btn btn-link text-primary ps-0">Learn More <i
+                                class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card service-card h-100 border-0 shadow-sm overflow-hidden">
+                    <div class="service-card-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1600267165477-6d4cc741b379?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                                <i class="fas fa-shoe-prints text-primary"></i>
                             </div>
+                            <h4 class="mb-0">Diabetic Foot Care</h4>
+                        </div>
+                        <p class="text-muted">Prevention and treatment of foot complications with specialized podiatry
+                            services and wound care.</p>
+                        <a href="#" class="btn btn-link text-primary ps-0">Learn More <i
+                                class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card service-card h-100 border-0 shadow-sm overflow-hidden">
+                    <div class="service-card-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1453&q=80');">
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                                <i class="fas fa-utensils text-primary"></i>
+                            </div>
+                            <h4 class="mb-0">Nutrition & Diet Counseling</h4>
+                        </div>
+                        <p class="text-muted">Customized meal plans and nutritional guidance tailored to your lifestyle
+                            and health goals.</p>
+                        <a href="#" class="btn btn-link text-primary ps-0">Learn More <i
+                                class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card service-card h-100 border-0 shadow-sm overflow-hidden">
+                    <div class="service-card-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                                <i class="fas fa-chalkboard-teacher text-primary"></i>
+                            </div>
+                            <h4 class="mb-0">Diabetes Education</h4>
+                        </div>
+                        <p class="text-muted">Empowering patients through knowledge with workshops, classes, and
+                            one-on-one coaching sessions.</p>
+                        <a href="#" class="btn btn-link text-primary ps-0">Learn More <i
+                                class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="#" class="btn btn-primary px-4 py-3 rounded-pill shadow">
+                <i class="fas fa-list me-2"></i>View All Services
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us - Modern Design -->
+<section class="py-6 bg-light position-relative">
+    <div class="container position-relative z-index-1">
+        <div class="row align-items-center">
+            <div class="col-lg-5 mb-5 mb-lg-0">
+                <span class="badge bg-primary bg-opacity-10 text-primary mb-3">Why Choose Us</span>
+                <h2 class="display-5 fw-bold mb-4">Exceptional Diabetes Care That Puts You First</h2>
+                <p class="lead text-muted mb-5">Our patient-centered approach combines cutting-edge technology with
+                    compassionate care to deliver outstanding results.</p>
+
+                <div class="d-flex align-items-start mb-4">
+                    <div class="bg-primary bg-opacity-10 p-3 rounded-circle flex-shrink-0 me-4">
+                        <i class="fas fa-microscope fs-4 text-primary"></i>
+                    </div>
+                    <div>
+                        <h4 class="h5">Advanced Treatment Technologies</h4>
+                        <p class="text-muted mb-0">We utilize the latest technologies including continuous glucose
+                            monitoring, insulin pumps, and AI-powered treatment planning.</p>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-start mb-4">
+                    <div class="bg-primary bg-opacity-10 p-3 rounded-circle flex-shrink-0 me-4">
+                        <i class="fas fa-user-md fs-4 text-primary"></i>
+                    </div>
+                    <div>
+                        <h4 class="h5">Expert Specialists</h4>
+                        <p class="text-muted mb-0">Our team consists of board-certified endocrinologists with extensive
+                            experience in diabetes care and research.</p>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-start">
+                    <div class="bg-primary bg-opacity-10 p-3 rounded-circle flex-shrink-0 me-4">
+                        <i class="fas fa-chart-line fs-4 text-primary"></i>
+                    </div>
+                    <div>
+                        <h4 class="h5">Proven Success Rates</h4>
+                        <p class="text-muted mb-0">Our evidence-based approaches have helped thousands achieve better
+                            glucose control and quality of life.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="position-relative">
+                    <div class="rounded-4 overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="Diabetes Care" class="img-fluid">
+                    </div>
+
+                    <div class="position-absolute bottom-0 start-0 translate-middle-y ms-4">
+                        <div class="card border-0 shadow-sm rounded-3 bg-white p-4" style="max-width: 300px;">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                                    <i class="fas fa-award text-primary fs-4"></i>
+                                </div>
+                                <h5 class="mb-0 fw-bold">Certified Center of Excellence</h5>
+                            </div>
+                            <p class="small text-muted mb-0">Recognized by the International Diabetes Federation for
+                                outstanding care standards and patient outcomes.</p>
                         </div>
                     </div>
 
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                                <div class="d-flex client-testi">
-                                    <img src="./images/client/04.jpg"
-                                        class="avatar avatar-small client-image rounded shadow" alt="">
-                                    <div class="card flex-1 content p-3 shadow rounded position-relative">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                        </ul>
-                                        <p class="text-muted mt-2">" Their clear reporting and transparent communication made it easy to track our progress. Truly a data-driven approach that works"</p>
-                                        <h6 class="text-primary">- Christa Smith <small
-                                                class="text-muted">Manager</small></h6>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="col-12 mt-4 pt-2">
-                                <div class="d-flex client-testi">
-                                    <img src="./images/clients/nitn_panchal.jpeg"
-                                        class="avatar avatar-small client-image rounded shadow" alt="">
-                                    <div class="card flex-1 content p-3 shadow rounded position-relative">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
-                                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i>
-                                            </li>
-                                        </ul>
-                                        <p class="text-muted mt-2">" Onella soft made a huge difference to our business. Their expertise in SEO and social media marketing is top-notch. Worth every penny "</p>
-                                        <h6 class="text-primary">- Head of Infra & Cloud Architect</h6>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="position-absolute top-0 end-0 translate-middle-y me-4">
+                        <div class="card border-0 shadow-sm rounded-3 bg-primary text-white p-3 text-center">
+                            <h3 class="display-4 fw-bold mb-0">95%</h3>
+                            <p class="mb-0 small">Patient Satisfaction</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-</section> -->
-
-<!-- Testimonial end here -->
-
-
-
-
-
-<!-- Start -->
-<section class="section">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-5 col-md-6">
-                <img src="./images/undraw/undraw_progress.svg" class="img-fluid rounded-md" alt="">
-            </div><!--end col-->
-
-            <div class="col-lg-7 col-md-6 mt-4 pt-2 mt-sm-0 pt-sm-0">
-                <div class="section-title text-md-start text-center">
-                    <h4 class="title mb-4">We Provide 360 Degree Digital Solutions For business</h4>
-                    <p class="text-muted mb-0 para-desc"> 
-                        <span class="text-primary fw-bold">Onella Soft</span> 
-                        offer a full spectrum of services tailored to your unique business needs, all designed with one core objective: to attract targeted, high-quality leads that are most likely to convert into paying customers.</p>
-
-                    <div class="d-flex align-items-center text-start mt-4">
-                        <div class="text-primary h4 mb-0 me-3 p-3 rounded-md shadow">
-                            <i class="uil uil-search"></i>
-                        </div>
-                        <div class="flex-1">
-                            <a [routerLink]="['/service-seo']" class="text-dark h6">Search Engine Optimization (SEO)</a>
-                            <p class="text-muted mb-0">Dominate search results and attract organic traffic with our cutting-edge SEO strategies.</p>
-                            <a [routerLink]="['/service-smm']" class="mt-3 h6 text-primary">Get Started <i class="uil uil-angle-right-b"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="d-flex align-items-center text-start mt-4">
-                        <div class="text-primary h4 mb-0 me-3 p-3 rounded-md shadow">
-                            <i class="uil uil-analytics"></i>
-                        </div>
-                        <div class="flex-1">
-                            <a [routerLink]="['/service-ppc']" class="text-dark h6">Performance Marketing (Pay-Per-Click)</a>
-                            <p class="text-muted mb-0">Even if users don't click on your ad, seeing your brand repeatedly at the top of search results or in their social feeds builds brand recognition and credibility.</p>
-                            <a [routerLink]="['/service-smm']" class="mt-3 h6 text-primary">Get Started <i class="uil uil-angle-right-b"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="d-flex align-items-center text-start mt-4 pt-2">
-                        <div class="text-primary h4 mb-0 me-3 p-3 rounded-md shadow">
-                            <i class="uil uil-share-alt"></i>
-                        </div>
-                        <div class="flex-1 flex-column">
-                            <a [routerLink]="['/service-smm']" class="text-dark h6">Social Media Marketing (SMM)</a>
-                            <p class="text-muted mb-0">Build a strong brand presence, engage with your audience, and drive conversions across popular social media platforms</p>
-                            <a [routerLink]="['/service-smm']" class="mt-3 h6 text-primary">Get Started <i class="uil uil-angle-right-b"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="d-flex align-items-center text-start mt-4">
-                        <div class="text-primary h4 mb-0 me-3 p-3 rounded-md shadow">
-                            <i class="uil uil-newspaper"></i>
-                        </div>
-                        <div class="flex-1">
-                            <a [routerLink]="['/service-content-marketing']" class="text-dark h6">Content Marketing</a>
-                            <p class="text-muted mb-0">Attract, engage, and convert your target audience with valuable, relevant, and consistent content. We develop content strategies,</p>
-                        </div>
-                    </div>
-                </div>
-            </div><!--end col-->
-        </div><!--end row-->
-    </div><!--end container-->
-
-
-</section><!--end section-->
-<!-- End -->
-
-
-
-<section class="section bg-light">
-
-    <div class="container mt-60">
-        <div class="row justify-content-center">
-            <div class="col-12 text-center">
-                <div class="section-title">
-                    <h4 class="title mb-4">Have Question ? Get in touch!</h4>
-                    <p class="text-muted para-desc mx-auto mb-0">Start working with <span
-                            class="text-primary fw-bold">Onella Soft</span> that can provide everything you need to
-                        generate awareness, drive traffic, connect.</p>
-
-                    <div class="mt-4">
-                        <a [routerLink]="['/contactus']" class="btn btn-primary mt-2 me-2">Get Started Now</a>
-                        <a [routerLink]="['/about']" class="btn btn-outline-primary mt-2">Explore More</a>
-                    </div>
-                </div>
-            </div><!--end col-->
-        </div><!--end row-->
-    </div><!--end container-->
 </section>
 
+<!-- Patient Testimonials - Enhanced Carousel -->
+<section class="py-7 bg-light position-relative">
+    <!-- Decorative elements -->
+    <div class="position-absolute top-0 start-0 w-100 h-100 opacity-10">
+        <div class="bg-shape bg-primary rounded-circle position-absolute"
+            style="width: 150px; height: 150px; top: 10%; left: 5%;"></div>
+        <div class="bg-shape bg-secondary rounded-circle position-absolute"
+            style="width: 100px; height: 100px; bottom: 15%; right: 8%;"></div>
+    </div>
 
+    <div class="container position-relative">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-9 text-center">
+                <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-3">
+                    <i class="fas fa-heart me-2"></i> Patient Stories
+                </span>
+                <h2 class="display-5 fw-bold mb-3">Transformative Diabetes Care Experiences</h2>
+                <p class="lead text-muted">Real stories from our patients about their journey to better health and
+                    diabetes management</p>
+            </div>
+        </div>
 
-
-<!-- Start Thanks Modal -->
-<div class="modal fade show d-block" id="wishlist" tabindex="-1" aria-hidden="true" *ngIf="showSuccessModal">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content rounded shadow border-0">
-            <div class="modal-body py-5">
-                <div class="text-center">
-                    <div class="icon d-flex align-items-center justify-content-center bg-soft-success rounded-circle mx-auto" style="height: 95px; width:95px;">
-                        <h1 class="mb-0"><i class="uil uil-comment-verify align-middle"></i></h1>
+        <div class="row">
+            <div class="col-12">
+                <!-- Testimonial Carousel -->
+                <div class="testimonial-carousel owl-carousel owl-theme owl-loaded owl-drag">
+                    <!-- Testimonial Item 1 -->
+                    <div class="testimonial-item">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4 p-lg-5">
+                                <div class="testimonial-rating mb-4">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                </div>
+                                <div class="testimonial-quote mb-4">
+                                    <i class="fas fa-quote-left text-primary opacity-25 fs-1 mb-3 d-block"></i>
+                                    <p class="fs-5 mb-0">"After struggling with type 2 diabetes for years, the
+                                        personalized care plan helped me reduce my HbA1c from 9.2% to 6.1% in just 6
+                                        months. I've never felt better!"</p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah Johnson"
+                                            class="testimonial-img rounded-circle" width="60" height="60">
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h5 class="mb-1">Sarah Johnson</h5>
+                                        <p class="text-muted small mb-0">Type 2 Diabetes Patient</p>
+                                        <p class="text-primary small mb-0">
+                                            <i class="fas fa-check-circle me-1"></i> Verified Patient
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-top-0 pt-0 pb-4 px-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-primary bg-opacity-10 text-primary">
+                                        <i class="fas fa-calendar-alt me-1"></i> 6 Month Program
+                                    </span>
+                                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill">
+                                        Full Story <i class="fas fa-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mt-4">
-                        <h4>We've Got Your Enquiry!</h4>
-                        <p class="text-muted">Thanks for reaching out. We’ll get back to you soon.</p>
-                        <div class="mt-4">
-                            <a (click)="showSuccessModal = false" class="btn btn-primary m-1">Close</a>
+
+                    <!-- Testimonial Item 2 -->
+                    <div class="testimonial-item">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4 p-lg-5">
+                                <div class="testimonial-rating mb-4">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                </div>
+                                <div class="testimonial-quote mb-4">
+                                    <i class="fas fa-quote-left text-primary opacity-25 fs-1 mb-3 d-block"></i>
+                                    <p class="fs-5 mb-0">"The diabetes education program changed my life. I finally
+                                        understand how to manage my condition, and the continuous glucose monitoring
+                                        system gave me control I never thought possible."</p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen"
+                                            class="testimonial-img rounded-circle" width="60" height="60">
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h5 class="mb-1">Michael Chen</h5>
+                                        <p class="text-muted small mb-0">Type 1 Diabetes Patient</p>
+                                        <p class="text-primary small mb-0">
+                                            <i class="fas fa-check-circle me-1"></i> Verified Patient
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-top-0 pt-0 pb-4 px-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-primary bg-opacity-10 text-primary">
+                                        <i class="fas fa-chalkboard-teacher me-1"></i> Education Program
+                                    </span>
+                                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill">
+                                        Full Story <i class="fas fa-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial Item 3 -->
+                    <div class="testimonial-item">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4 p-lg-5">
+                                <div class="testimonial-rating mb-4">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star-half-alt text-warning"></i>
+                                </div>
+                                <div class="testimonial-quote mb-4">
+                                    <i class="fas fa-quote-left text-primary opacity-25 fs-1 mb-3 d-block"></i>
+                                    <p class="fs-5 mb-0">"The pediatric care team has been incredible. They've helped
+                                        manage my daughter's condition while teaching our whole family how to support
+                                        her while letting her be a normal kid."</p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Lisa Rodriguez"
+                                            class="testimonial-img rounded-circle" width="60" height="60">
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h5 class="mb-1">Lisa Rodriguez</h5>
+                                        <p class="text-muted small mb-0">Parent of Pediatric Patient</p>
+                                        <p class="text-primary small mb-0">
+                                            <i class="fas fa-check-circle me-1"></i> Verified Patient
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-top-0 pt-0 pb-4 px-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-primary bg-opacity-10 text-primary">
+                                        <i class="fas fa-child me-1"></i> Pediatric Care
+                                    </span>
+                                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill">
+                                        Full Story <i class="fas fa-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial Item 4 (New) -->
+                    <div class="testimonial-item">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4 p-lg-5">
+                                <div class="testimonial-rating mb-4">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                </div>
+                                <div class="testimonial-quote mb-4">
+                                    <i class="fas fa-quote-left text-primary opacity-25 fs-1 mb-3 d-block"></i>
+                                    <p class="fs-5 mb-0">"The weight management program helped me lose 40 pounds and get
+                                        my diabetes under control. The nutritionists and doctors worked together to
+                                        create a plan that actually worked for me."</p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="David Wilson"
+                                            class="testimonial-img rounded-circle" width="60" height="60">
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h5 class="mb-1">David Wilson</h5>
+                                        <p class="text-muted small mb-0">Weight Management Patient</p>
+                                        <p class="text-primary small mb-0">
+                                            <i class="fas fa-check-circle me-1"></i> Verified Patient
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-top-0 pt-0 pb-4 px-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-primary bg-opacity-10 text-primary">
+                                        <i class="fas fa-weight me-1"></i> Weight Program
+                                    </span>
+                                    <a href="#" class="btn btn-sm btn-outline-primary rounded-pill">
+                                        Full Story <i class="fas fa-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Navigation -->
+                <div class="d-flex justify-content-center mt-4">
+                    <button class="btn btn-sm btn-outline-primary rounded-circle testimonial-prev me-2">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="btn btn-sm btn-outline-primary rounded-circle testimonial-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="row justify-content-center mt-6">
+            <div class="col-lg-8 text-center">
+                <div class="card border-0 bg-primary text-white shadow-lg py-4 px-3 px-lg-5">
+                    <div class="card-body">
+                        <h3 class="h2 mb-3">Ready to transform your diabetes management?</h3>
+                        <p class="lead mb-4 opacity-75">Join hundreds of satisfied patients who've improved their health
+                            with our specialized care.</p>
+                        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                            <a href="#" class="btn btn-light rounded-pill px-4 py-3 fw-bold">
+                                <i class="fas fa-calendar-check me-2"></i> Book an Appointment
+                            </a>
+                            <a href="#" class="btn btn-outline-light rounded-pill px-4 py-3">
+                                <i class="fas fa-phone-alt me-2"></i> Call Us Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+            <span class="badge bg-primary bg-opacity-10 text-primary mb-3">Testimonials</span>
+            <h2 class="display-5 fw-bold mb-3">What Our Patients Say</h2>
+            <p class="lead text-muted">Hear from people whose lives we've changed through comprehensive diabetes care.
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="testimonial-carousel owl-carousel owl-theme">
+                <div class="testimonial-card">
+                    
+                    <div class="testimonial-rating mb-3">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                    </div>
+                    <p class="testimonial-text mb-4">"After struggling with type 2 diabetes for years, the personalized
+                        care plan from Diabetes Care Hospital helped me reduce my HbA1c from 9.2% to 6.1% in just 6
+                        months. I've never felt better!"</p>
+                    <div class="d-flex align-items-center">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah Johnson"
+                            class="testimonial-img rounded-circle me-3">
+                        <div>
+                            <h5 class="mb-0">Sarah Johnson</h5>
+                            <p class="text-muted small mb-0">Type 2 Diabetes Patient</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating mb-3">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                    </div>
+                    <p class="testimonial-text mb-4">"The diabetes education program changed my life. I finally
+                        understand how to manage my condition, and the continuous glucose monitoring system recommended
+                        by my doctor has given me control I never thought possible."</p>
+                    <div class="d-flex align-items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen"
+                            class="testimonial-img rounded-circle me-3">
+                        <div>
+                            <h5 class="mb-0">Michael Chen</h5>
+                            <p class="text-muted small mb-0">Type 1 Diabetes Patient</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating mb-3">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star-half-alt text-warning"></i>
+                    </div>
+                    <p class="testimonial-text mb-4">"As a parent of a child with diabetes, the pediatric care team has
+                        been incredible. They've not only helped manage my daughter's condition but also taught our
+                        whole family how to support her while letting her be a normal kid."</p>
+                    <div class="d-flex align-items-center">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Lisa Rodriguez"
+                            class="testimonial-img rounded-circle me-3">
+                        <div>
+                            <h5 class="mb-0">Lisa Rodriguez</h5>
+                            <p class="text-muted small mb-0">Parent of Pediatric Patient</p>
                         </div>
                     </div>
                 </div>
@@ -468,6 +610,474 @@
         </div>
     </div>
 </div>
-<!-- End Thanks Modal-->
- <div class="modal-backdrop fade show d-block" *ngIf="showSuccessModal"></div>
- 
+
+
+<!-- Events & Workshops - Timeline Style -->
+<section class="py-6 bg-white">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center">
+                <span class="badge bg-primary bg-opacity-10 text-primary mb-3">Events</span>
+                <h2 class="display-5 fw-bold mb-3">Upcoming Events & Workshops</h2>
+                <p class="lead text-muted">Join our educational programs to learn more about diabetes management and
+                    prevention.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="event-timeline">
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">15</span>
+                            <span class="month">Jul</span>
+                        </div>
+                        <div class="event-content">
+                            <h4 class="mb-3">Free Diabetes Screening Camp</h4>
+                            <div class="d-flex flex-wrap gap-3 mb-3">
+                                <span class="text-muted"><i class="far fa-clock text-primary me-2"></i>9:00 AM - 4:00
+                                    PM</span>
+                                <span class="text-muted"><i class="fas fa-map-marker-alt text-primary me-2"></i>Main
+                                    Hospital Campus</span>
+                            </div>
+                            <p class="mb-3">Get your free blood sugar test and consultation with our diabetes
+                                specialists. No appointment needed.</p>
+                            <a href="#" class="btn btn-sm btn-primary rounded-pill">Register Now</a>
+                        </div>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">22</span>
+                            <span class="month">Jul</span>
+                        </div>
+                        <div class="event-content">
+                            <h4 class="mb-3">Webinar: Diabetes Management</h4>
+                            <div class="d-flex flex-wrap gap-3 mb-3">
+                                <span class="text-muted"><i class="far fa-clock text-primary me-2"></i>6:00 PM - 7:30
+                                    PM</span>
+                                <span class="text-muted"><i class="fas fa-laptop text-primary me-2"></i>Online
+                                    Event</span>
+                            </div>
+                            <p class="mb-3">Learn about the latest strategies for effective diabetes self-management
+                                from our expert endocrinologists.</p>
+                            <a href="#" class="btn btn-sm btn-primary rounded-pill">Register Now</a>
+                        </div>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">Every</span>
+                            <span class="month">Tue</span>
+                        </div>
+                        <div class="event-content">
+                            <h4 class="mb-3">Diabetes Support Group Meeting</h4>
+                            <div class="d-flex flex-wrap gap-3 mb-3">
+                                <span class="text-muted"><i class="far fa-clock text-primary me-2"></i>5:30 PM - 7:00
+                                    PM</span>
+                                <span class="text-muted"><i
+                                        class="fas fa-map-marker-alt text-primary me-2"></i>Community Room B</span>
+                            </div>
+                            <p class="mb-3">Connect with others living with diabetes. Share experiences, challenges, and
+                                successes in a supportive environment.</p>
+                            <a href="#" class="btn btn-sm btn-primary rounded-pill">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href="#" class="btn btn-outline-primary rounded-pill px-4">
+                        <i class="far fa-calendar-alt me-2"></i>View All Events
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Doctor's Profile Section - Modern Cards -->
+<section id="doctors" class="py-6 bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center">
+                <span class="badge bg-primary bg-opacity-10 text-primary mb-3">Our Team</span>
+                <h2 class="display-5 fw-bold mb-3">Meet Our Diabetes Specialists</h2>
+                <p class="lead text-muted">Board-certified endocrinologists dedicated to your diabetes care and
+                    management.</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="card doctor-card border-0 shadow-sm h-100 hover-lift">
+                    <div class="doctor-img-container">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Dr. Sarah Williams"
+                            class="doctor-img">
+                        <div class="doctor-social">
+                            <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-white"><i class="fas fa-envelope"></i></a>
+                            <a href="#" class="text-white"><i class="fas fa-share-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center p-4">
+                        <h5 class="mb-1">Dr. Sarah Williams</h5>
+                        <p class="text-muted small mb-3">Chief Endocrinologist</p>
+                        <p class="small text-muted mb-3">Specializes in type 1 diabetes and advanced insulin therapies
+                        </p>
+                        <a href="#" class="btn btn-sm btn-outline-primary rounded-pill stretched-link">View Profile</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="card doctor-card border-0 shadow-sm h-100 hover-lift">
+                    <div class="doctor-img-container">
+                        <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Dr. Robert Chen"
+                            class="doctor-img">
+                        <div class="doctor-social">
+                            <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-white"><i class="fas fa-envelope"></i></a>
+                            <a href="#" class="text-white"><i class="fas fa-share-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center p-4">
+                        <h5 class="mb-1">Dr. Robert Chen</h5>
+                        <p class="text-muted small mb-3">Diabetologist</p>
+                        <p class="small text-muted mb-3">Expert in diabetes prevention and metabolic syndrome</p>
+                        <a href="#" class="btn btn-sm btn-outline-primary rounded-pill stretched-link">View Profile</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="card doctor-card border-0 shadow-sm h-100 hover-lift">
+                    <div class="doctor-img-container">
+                        <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Dr. Maria Garcia"
+                            class="doctor-img">
+                        <div class="doctor-social">
+                            <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-white"><i class="fas fa-envelope"></i></a>
+                            <a href="#" class="text-white"><i class="fas fa-share-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center p-4">
+                        <h5 class="mb-1">Dr. Maria Garcia</h5>
+                        <p class="text-muted small mb-3">Pediatric Endocrinologist</p>
+                        <p class="small text-muted mb-3">Specialized care for children with diabetes</p>
+                        <a href="#" class="btn btn-sm btn-outline-primary rounded-pill stretched-link">View Profile</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="card doctor-card border-0 shadow-sm h-100 hover-lift">
+                    <div class="doctor-img-container">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Dr. James Wilson"
+                            class="doctor-img">
+                        <div class="doctor-social">
+                            <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-white"><i class="fas fa-envelope"></i></a>
+                            <a href="#" class="text-white"><i class="fas fa-share-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-body text-center p-4">
+                        <h5 class="mb-1">Dr. James Wilson</h5>
+                        <p class="text-muted small mb-3">Diabetes Surgeon</p>
+                        <p class="small text-muted mb-3">Bariatric surgery for diabetes remission</p>
+                        <a href="#" class="btn btn-sm btn-outline-primary rounded-pill stretched-link">View Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="#" class="btn btn-primary px-4 py-3 rounded-pill shadow">
+                <i class="fas fa-user-md me-2"></i>View All Doctors
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Emergency & Support Section - Modern Design -->
+<section class="py-6 bg-white">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="pe-lg-5">
+                    <span class="badge bg-danger bg-opacity-10 text-danger mb-3">Emergency</span>
+                    <h2 class="display-5 fw-bold mb-4">Diabetes Emergency Support</h2>
+
+                    <div
+                        class="emergency-box bg-danger bg-opacity-10 border-start border-danger border-4 p-4 rounded-end mb-5">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-exclamation-triangle text-danger fs-2 me-3"></i>
+                            <h4 class="mb-0">24/7 Diabetes Emergency Helpline</h4>
+                        </div>
+                        <p class="mb-4">Immediate assistance for severe hypoglycemia or hyperglycemia from our expert
+                            team.</p>
+                        <a href="tel:+18005551234" class="btn btn-danger btn-lg rounded-pill px-4 shadow-sm">
+                            <i class="fas fa-phone-alt me-2"></i> Call Now: 1-800-555-1234
+                        </a>
+                    </div>
+
+                    <div class="accordion custom-accordion" id="emergencyAccordion">
+                        <div class="accordion-item border-0 shadow-sm mb-3 rounded overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button bg-white" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne">
+                                    <i class="fas fa-info-circle text-primary me-3"></i> Recognizing Hypoglycemia
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                data-bs-parent="#emergencyAccordion">
+                                <div class="accordion-body bg-light">
+                                    <p><strong>Symptoms:</strong> Shakiness, sweating, dizziness, confusion, rapid
+                                        heartbeat</p>
+                                    <p><strong>Immediate Action:</strong> Consume 15g fast-acting carbs (glucose
+                                        tablets, juice) and recheck in 15 minutes</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border-0 shadow-sm mb-3 rounded overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-white" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    <i class="fas fa-info-circle text-primary me-3"></i> Recognizing Hyperglycemia
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#emergencyAccordion">
+                                <div class="accordion-body bg-light">
+                                    <p><strong>Symptoms:</strong> Extreme thirst, frequent urination, fatigue, blurred
+                                        vision</p>
+                                    <p><strong>Immediate Action:</strong> Check blood sugar, take insulin as prescribed,
+                                        drink water, seek medical help if symptoms worsen</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border-0 shadow-sm rounded overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-white" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    <i class="fas fa-info-circle text-primary me-3"></i> When to Seek Emergency Care
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#emergencyAccordion">
+                                <div class="accordion-body bg-light">
+                                    <ul class="mb-0">
+                                        <li>Blood sugar remains below 70 mg/dL after treatment</li>
+                                        <li>Blood sugar above 300 mg/dL with symptoms of DKA</li>
+                                        <li>Loss of consciousness or seizures</li>
+                                        <li>Difficulty breathing or severe dehydration</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-header bg-primary text-white py-3">
+                        <h5 class="mb-0"><i class="fas fa-first-aid me-2"></i> Diabetes Emergency Kit Checklist</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="mb-4">Be prepared for diabetes emergencies with these essential items:</p>
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-check bg-light p-3 rounded">
+                                    <input class="form-check-input" type="checkbox" id="check1" checked>
+                                    <label class="form-check-label" for="check1">Glucose meter with extra test
+                                        strips</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-check bg-light p-3 rounded">
+                                    <input class="form-check-input" type="checkbox" id="check2">
+                                    <label class="form-check-label" for="check2">Fast-acting carbohydrates</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-check bg-light p-3 rounded">
+                                    <input class="form-check-input" type="checkbox" id="check3">
+                                    <label class="form-check-label" for="check3">Insulin and syringes/pens</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-check bg-light p-3 rounded">
+                                    <input class="form-check-input" type="checkbox" id="check4">
+                                    <label class="form-check-label" for="check4">Glucagon emergency kit</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-check bg-light p-3 rounded">
+                                    <input class="form-check-input" type="checkbox" id="check5">
+                                    <label class="form-check-label" for="check5">Medical ID bracelet</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-check bg-light p-3 rounded">
+                                    <input class="form-check-input" type="checkbox" id="check6">
+                                    <label class="form-check-label" for="check6">Medications list</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-check bg-light p-3 rounded">
+                                    <input class="form-check-input" type="checkbox" id="check7">
+                                    <label class="form-check-label" for="check7">Bottled water and snacks</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <button class="btn btn-primary rounded-pill" onclick="printChecklist()">
+                            <i class="fas fa-print me-2"></i>Print Checklist
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Insurance & Payment Options - Modern Cards -->
+<section class="py-6 bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center">
+                <span class="badge bg-primary bg-opacity-10 text-primary mb-3">Financial Options</span>
+                <h2 class="display-5 fw-bold mb-3">Insurance & Payment Options</h2>
+                <p class="lead text-muted">We work with most major insurance providers and offer flexible payment plans
+                    to make diabetes care accessible.</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                                <i class="fas fa-shield-alt text-primary fs-4"></i>
+                            </div>
+                            <h4 class="mb-0">Accepted Insurance Providers</h4>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-3 d-flex align-items-center">
+                                        <i class="fas fa-check-circle text-success me-2"></i> Medicare
+                                    </li>
+                                    <li class="mb-3 d-flex align-items-center">
+                                        <i class="fas fa-check-circle text-success me-2"></i> Medicaid
+                                    </li>
+                                    <li class="mb-3 d-flex align-items-center">
+                                        <i class="fas fa-check-circle text-success me-2"></i> Blue Cross Blue Shield
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <i class="fas fa-check-circle text-success me-2"></i> Aetna
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-3 d-flex align-items-center">
+                                        <i class="fas fa-check-circle text-success me-2"></i> UnitedHealthcare
+                                    </li>
+                                    <li class="mb-3 d-flex align-items-center">
+                                        <i class="fas fa-check-circle text-success me-2"></i> Cigna
+                                    </li>
+                                    <li class="mb-3 d-flex align-items-center">
+                                        <i class="fas fa-check-circle text-success me-2"></i> Humana
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <i class="fas fa-check-circle text-success me-2"></i> Kaiser Permanente
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 pt-3 border-top">
+                            <p class="mb-0">Don't see your provider? Contact our billing department to verify coverage.
+                            </p>
+                            <a href="#" class="btn btn-outline-primary rounded-pill mt-3">Verify Insurance</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                                <i class="fas fa-credit-card text-primary fs-4"></i>
+                            </div>
+                            <h4 class="mb-0">Flexible Payment Plans</h4>
+                        </div>
+
+                        <p class="mb-4">We offer several options to make diabetes care affordable:</p>
+
+                        <div class="list-group list-group-flush mb-4">
+                            <div
+                                class="list-group-item bg-transparent d-flex justify-content-between align-items-center py-3 px-0">
+                                <div>
+                                    <i class="fas fa-percentage text-primary me-3"></i>
+                                    <span>Interest-free EMI options</span>
+                                </div>
+                                <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill">0% APR</span>
+                            </div>
+
+                            <div
+                                class="list-group-item bg-transparent d-flex justify-content-between align-items-center py-3 px-0">
+                                <div>
+                                    <i class="fas fa-tags text-primary me-3"></i>
+                                    <span>Discounted package pricing</span>
+                                </div>
+                                <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill">Save 15%</span>
+                            </div>
+
+                            <div
+                                class="list-group-item bg-transparent d-flex justify-content-between align-items-center py-3 px-0">
+                                <div>
+                                    <i class="fas fa-hand-holding-usd text-primary me-3"></i>
+                                    <span>Financial assistance programs</span>
+                                </div>
+                                <span
+                                    class="badge bg-primary bg-opacity-10 text-primary rounded-pill">Income-based</span>
+                            </div>
+
+                            <div
+                                class="list-group-item bg-transparent d-flex justify-content-between align-items-center py-3 px-0">
+                                <div>
+                                    <i class="fas fa-credit-card text-primary me-3"></i>
+                                    <span>All major credit cards accepted</span>
+                                </div>
+                                <div class="text-primary">
+                                    <i class="fab fa-cc-visa"></i>
+                                    <i class="fab fa-cc-mastercard ms-2"></i>
+                                    <i class="fab fa-cc-amex ms-2"></i>
+                                    <i class="fab fa-cc-discover ms-2"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="btn btn-outline-primary rounded-pill">Learn About Payment Plans</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Back to Top Button -->
+<a href="#" class="btn btn-primary btn-back-to-top rounded-circle shadow">
+    <i class="fas fa-arrow-up"></i>
+</a>

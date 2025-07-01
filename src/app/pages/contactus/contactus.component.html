@@ -5,7 +5,7 @@
         <div class="row mt-5 justify-content-center">
             <div class="col-lg-12 text-center">
                 <div class="pages-heading">
-                    <h4 class="title mb-0 text-white">Patient Care Center</h4>
+                    <h4 class="title mb-0 text-white">Contact Us</h4>
                 </div>
             </div> <!--end col-->
         </div><!--end row-->
@@ -14,7 +14,7 @@
             <nav aria-label="breadcrumb" class="d-inline-block">
                 <ul class="breadcrumb rounded shadow mb-0 px-4 py-2">
                     <li class="breadcrumb-item"><a [routerLink]="['/home']">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Contact & Appointments</li>
+                    <li class="breadcrumb-item active" aria-current="page">Contact Information</li>
                 </ul>
             </nav>
         </div>
@@ -32,125 +32,16 @@
 </div>
 <!--Shape End-->
 
-<!-- Start Contact & Appointment Section -->
+<!-- Start Contact Section -->
 <section class="section">
     <div class="container">
         <div class="row">
-            <div class="col-lg-5 col-md-6 mt-4 pt-2">
-                <div class="card shadow rounded border-0">
-                    <div class="card-body py-5">
-                        <h4 class="card-title">Book an Appointment</h4>
-                        
-                        <!-- Notification Popup -->
-                        <div *ngIf="showPopup" class="alert alert-dismissible fade show" 
-                            [ngClass]="{
-                                'alert-success': popupType === 'success',
-                                'alert-danger': popupType === 'error'
-                            }"
-                            role="alert">
-                            {{ popupMessage }}
-                            <button type="button" class="btn-close" (click)="closePopup()" aria-label="Close"></button>
-                        </div>
-                        
-                        <div class="custom-form mt-3">
-                            <form #appointmentForm="ngForm" (ngSubmit)="submitAppointment()">
-                                <div class="row">
-                                    <div class="col-md-12 mb-3">
-                                        <label class="form-label">Full Name</label>
-                                        <div class="form-icon position-relative">
-                                            <i data-feather="user" class="feather-icon"></i>
-                                            <input name="name" id="name" type="text" 
-                                                class="form-control ps-5" 
-                                                [(ngModel)]="appointmentData.name"
-                                                placeholder="Patient's full name" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-12 mb-3">
-                                        <label class="form-label">Email Address</label>
-                                        <div class="form-icon position-relative">
-                                            <i data-feather="mail" class="feather-icon"></i>
-                                            <input name="email" id="email" type="email" 
-                                                class="form-control ps-5" 
-                                                [(ngModel)]="appointmentData.email"
-                                                placeholder="Email address" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-12 mb-3">
-                                        <label class="form-label">Phone Number</label>
-                                        <div class="form-icon position-relative">
-                                            <i data-feather="phone" class="feather-icon"></i>
-                                            <input name="phone" id="phone" type="tel" 
-                                                class="form-control ps-5" 
-                                                [(ngModel)]="appointmentData.phone"
-                                                placeholder="Contact number" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6 mb-3">
-                                        <label class="form-label">Appointment Date</label>
-                                        <div class="form-icon position-relative">
-                                            <i data-feather="calendar" class="feather-icon"></i>
-                                            <input name="date" id="date" type="date" 
-                                                class="form-control ps-5" 
-                                                [(ngModel)]="appointmentData.date"
-                                                required>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6 mb-3">
-                                        <label class="form-label">Department</label>
-                                        <div class="form-icon position-relative">
-                                            <i data-feather="clipboard" class="feather-icon"></i>
-                                            <select name="department" id="department" 
-                                                class="form-select ps-5" 
-                                                [(ngModel)]="appointmentData.department"
-                                                required>
-                                                <option value="">Select Department</option>
-                                                <option value="cardiology">Cardiology</option>
-                                                <option value="neurology">Neurology</option>
-                                                <option value="pediatrics">Pediatrics</option>
-                                                <option value="orthopedics">Orthopedics</option>
-                                                <option value="general">General Medicine</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <div class="mb-3">
-                                            <label class="form-label">Symptoms/Reason</label>
-                                            <div class="form-icon position-relative">
-                                                <i data-feather="alert-circle" class="feather-icon"></i>
-                                                <textarea name="message" id="message" rows="3" 
-                                                        class="form-control ps-5" 
-                                                        [(ngModel)]="appointmentData.message"
-                                                        placeholder="Briefly describe your symptoms or reason for visit"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="d-grid">
-                                            <button type="submit" class="btn btn-primary">
-                                                <i class="uil uil-calendar-alt me-1"></i> Book Appointment
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-7 col-md-6 ps-md-3 pe-md-3 mt-4 pt-2">
+            <div class="col-lg-12">
                 <div class="card map map-height-two rounded border-0">
                     <div class="card-body p-0">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343008!2d-74.00425872426692!3d40.74076987932881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bf5c1654f3%3A0xc80f9cfce5383d5d!2sMadison%20Square%20Garden!5e0!3m2!1sen!2sus!4v1623251016929!5m2!1sen!2sus"
-                            style="border:0" class="rounded" allowfullscreen="" loading="lazy"
+                            style="border:0" class="rounded w-100" height="450" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
@@ -225,4 +116,4 @@
         </div>
     </div><!--end container-->
 </section><!--end section-->
-<!-- End Contact & Appointment Section -->
+<!-- End Contact Section -->

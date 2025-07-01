@@ -1,116 +1,114 @@
- <!-- Hero Start -->
-        <section class="bg-half-170 bg-primary d-table w-100" style="background-image: url('assets/images/job/bg.png');">
-            <div class="container">
-                <div class="row mt-5 justify-content-center">
-                    <div class="col-lg-12 text-center">
-                        <div class="pages-heading">
-                            <h2 class="title text-white title-dark mb-0"> Job Apply Form </h2>
-                        </div>
-                    </div>  <!--end col-->
-                </div><!--end row-->
-                
-                <div class="position-breadcrumb">
-                    <nav aria-label="breadcrumb" class="d-inline-block">
-                        <ul class="breadcrumb rounded shadow mb-0 px-4 py-2">
-                            <li class="breadcrumb-item"><a href="index.html">Onella Soft</a></li>
-                            <li class="breadcrumb-item"><a href="index-job.html">Careers</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Job Apply</li>
-                        </ul>
-                    </nav>
-                </div>
-            </div> <!--end container-->
-        </section><!--end section-->
-        <!-- Hero End -->
+<!-- 
 
-        <!-- Shape Start -->
-        <div class="position-relative">
-            <div class="shape overflow-hidden text-color-white">
-                <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
-                </svg>
-            </div>
-        </div>
-        <!--Shape End-->
-        
-        <!-- Job apply form Start -->
-        <section class="section">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-10 col-md-7">
-                        <div class="card custom-form border-0">
-                            <div class="card-body">
-                                <form class="rounded shadow p-4">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="mb-3">
-                                                <label class="form-label">Your Name :<span class="text-danger">*</span></label>
-                                                <div class="form-icon position-relative">
-                                                    <i data-feather="user" class="fea icon-sm icons"></i>
-                                                    <input name="name" id="name2" type="text" class="form-control ps-5" placeholder="First Name :">
-                                                </div>
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-6 mt-4 pt-2">
+                <div class="card shadow rounded border-0">
+                    <div class="card-body py-5">
+                        <h4 class="card-title">Book an Appointment</h4>
+                        
+                        <div *ngIf="showPopup" class="alert alert-dismissible fade show" 
+                            [ngClass]="{
+                                'alert-success': popupType === 'success',
+                                'alert-danger': popupType === 'error'
+                            }"
+                            role="alert">
+                            {{ popupMessage }}
+                            <button type="button" class="btn-close" (click)="closePopup()" aria-label="Close"></button>
+                        </div>
+                        
+                        <div class="custom-form mt-3">
+                            <form #appointmentForm="ngForm" (ngSubmit)="submitAppointment()">
+                                <div class="row">
+                                    <div class="col-md-12 mb-3">
+                                        <label class="form-label">Full Name</label>
+                                        <div class="form-icon position-relative">
+                                            <i data-feather="user" class="feather-icon"></i>
+                                            <input name="name" id="name" type="text" 
+                                                class="form-control ps-5" 
+                                                [(ngModel)]="appointmentData.name"
+                                                placeholder="Patient's full name" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 mb-3">
+                                        <label class="form-label">Email Address</label>
+                                        <div class="form-icon position-relative">
+                                            <i data-feather="mail" class="feather-icon"></i>
+                                            <input name="email" id="email" type="email" 
+                                                class="form-control ps-5" 
+                                                [(ngModel)]="appointmentData.email"
+                                                placeholder="Email address" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 mb-3">
+                                        <label class="form-label">Phone Number</label>
+                                        <div class="form-icon position-relative">
+                                            <i data-feather="phone" class="feather-icon"></i>
+                                            <input name="phone" id="phone" type="tel" 
+                                                class="form-control ps-5" 
+                                                [(ngModel)]="appointmentData.phone"
+                                                placeholder="Contact number" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Appointment Date</label>
+                                        <div class="form-icon position-relative">
+                                            <i data-feather="calendar" class="feather-icon"></i>
+                                            <input name="date" id="date" type="date" 
+                                                class="form-control ps-5" 
+                                                [(ngModel)]="appointmentData.date"
+                                                required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Department</label>
+                                        <div class="form-icon position-relative">
+                                            <i data-feather="clipboard" class="feather-icon"></i>
+                                            <select name="department" id="department" 
+                                                class="form-select ps-5" 
+                                                [(ngModel)]="appointmentData.department"
+                                                required>
+                                                <option value="">Select Department</option>
+                                                <option value="cardiology">Cardiology</option>
+                                                <option value="neurology">Neurology</option>
+                                                <option value="pediatrics">Pediatrics</option>
+                                                <option value="orthopedics">Orthopedics</option>
+                                                <option value="general">General Medicine</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="mb-3">
+                                            <label class="form-label">Symptoms/Reason</label>
+                                            <div class="form-icon position-relative">
+                                                <i data-feather="alert-circle" class="feather-icon"></i>
+                                                <textarea name="message" id="message" rows="3" 
+                                                        class="form-control ps-5" 
+                                                        [(ngModel)]="appointmentData.message"
+                                                        placeholder="Briefly describe your symptoms or reason for visit"></textarea>
                                             </div>
-                                        </div><!--end col-->
-                                        <div class="col-md-6">
-                                            <div class="mb-3">
-                                                <label class="form-label">Your Email :<span class="text-danger">*</span></label>
-                                                <div class="form-icon position-relative">
-                                                    <i data-feather="mail" class="fea icon-sm icons"></i>
-                                                    <input name="email" id="email2" type="email" class="form-control ps-5" placeholder="Your email :">
-                                                </div>
-                                            </div> 
-                                        </div><!--end col-->
-                                        <div class="col-md-6">
-                                            <div class="mb-3">
-                                                <label class="form-label">Your Phone no. :<span class="text-danger">*</span></label>
-                                                <div class="form-icon position-relative">
-                                                    <i data-feather="phone" class="fea icon-sm icons"></i>
-                                                    <input name="number" id="number2" type="number" class="form-control ps-5" placeholder="Your phone no. :">
-                                                </div>
-                                            </div> 
-                                        </div><!--end col-->
-                                        <div class="col-md-6">
-                                            <div class="mb-3">
-                                                <label class="form-label">Job Role :</label>
-                                                <div class="form-icon position-relative">
-                                                    <i data-feather="book" class="fea icon-sm icons"></i>
-                                                    <input name="subject" id="subject2" class="form-control ps-5" placeholder="Title :">
-                                                </div>
-                                            </div>                                                                               
-                                        </div><!--end col-->
-                                        <div class="col-md-12">
-                                            <div class="mb-3">
-                                                <label class="form-label">Bio :</label>
-                                                <div class="form-icon position-relative">
-                                                    <i data-feather="message-circle" class="fea icon-sm icons"></i>
-                                                    <textarea name="comments" id="comments2" rows="4" class="form-control ps-5" placeholder="Describe the job :"></textarea>
-                                                </div>
-                                            </div>
-                                        </div><!--end col-->                                    
-                                        <div class="col-md-12">
-                                            <div class="mb-3">
-                                                <label for="formFile" class="form-label">Upload Your Cv / Resume :</label>
-                                                <input class="form-control" type="file" id="formFile">
-                                            </div>                                                                               
-                                        </div><!--end col-->
-                                        <div class="col-md-12">
-                                            <div class="mb-3">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                    <label class="form-check-label" for="flexCheckDefault">I Accept <a href="#" class="text-primary">Terms And Condition</a></label>
-                                                </div>
-                                            </div>
-                                        </div><!--end col-->
-                                    </div><!--end row-->
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <input type="submit" id="submit2" name="send" class="submitBnt btn btn-primary" value="Apply Now">
-                                        </div><!--end col-->
-                                    </div><!--end row-->
-                                </form><!--end form-->
-                            </div> 
-                        </div><!--end custom-form-->
-                    </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="d-grid">
+                                            <button type="submit" class="btn btn-primary">
+                                                <i class="uil uil-calendar-alt me-1"></i> Book Appointment
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-            </div><!--end container-->
-        </section><!--end section-->
-        <!-- Job apply form End -->
+            </div>
+
+        -->

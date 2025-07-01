@@ -1,0 +1,36 @@
+
+    .hero-section {
+        padding: 100px 0;
+        background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
+    }
+    
+    .card {
+        transition: transform 0.3s ease;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .form-control, .form-select {
+        padding: 12px 15px;
+    }
+    
+    .input-group-text {
+        background-color: #f8f9fa;
+    }
+    
+    textarea {
+        min-height: 120px;
+    }
+    
+    .btn-primary {
+        background-color: #4e73df;
+        border-color: #4e73df;
+        padding: 12px;
+    }
+    
+    .btn-primary:hover {
+        background-color: #2e59d9;
+        border-color: #2653d4;
+    }
