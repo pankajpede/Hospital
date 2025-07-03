@@ -1,0 +1,31 @@
+.service-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1490645935967-10de6ba17061');
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 50px;
+        }
+        .food-icon {
+            font-size: 2rem;
+            color: #198754;
+            margin-right: 15px;
+        }
+        .diet-card {
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            height: 100%;
+        }
+        .diet-card:hover {
+            transform: translateY(-10px);
+        }
+        .food-list li {
+            margin-bottom: 10px;
+            padding-left: 10px;
+            border-left: 3px solid #198754;
+        }
+        .plate-section {
+            background-color: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+        }

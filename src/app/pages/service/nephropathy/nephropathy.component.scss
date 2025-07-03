@@ -1,0 +1,36 @@
+ .service-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d');
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 50px;
+        }
+        .kidney-icon {
+            font-size: 2rem;
+            color: #0d6efd;
+        }
+        .stage-item {
+            border-left: 3px solid #0d6efd;
+            padding-left: 20px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .stage-item:before {
+            content: "";
+            position: absolute;
+            left: -8px;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #0d6efd;
+        }
+        .prevention-card {
+            border-radius: 10px;
+            transition: all 0.3s;
+            height: 100%;
+        }
+        .prevention-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }

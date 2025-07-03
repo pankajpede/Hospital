@@ -40,27 +40,17 @@
                             </ul>
                         </li>
 
-                        <li class="has-submenu parent-parent-menu-item">
-                            <a (click)="showServiceMenu()">Solutions</a><span class="menu-arrow"></span>
-                            <ul class="submenu" [ngClass]="showServicesSubmenu == true ? 'open' : 'none'">
-                                <li><a [routerLink]="['/service-seo']" class="sub-menu-item">Search Engine Optimization (SEO) </a></li>
-                                <li><a [routerLink]="['/service-ppc']" class="sub-menu-item">Performance Marketing </a></li>
-                                <li><a [routerLink]="['/service-smm']" class="sub-menu-item">Social Media Marketing </a></li>
-                                <li><a [routerLink]="['/service-content-marketing']" class="sub-menu-item">Content Marketing </a></li>
-                                <!-- <li><a [routerLink]="['/service-webdev']" class="sub-menu-item">Web Development & Design </a></li> -->
-                            </ul>
-                        </li>
 
                         <li class="has-submenu parent-parent-menu-item">
-                            <a (click)="showshowIndustries()" >Industries</a><span class="menu-arrow"></span>
-                            <ul class="submenu">
-                                <li><a [routerLink]="['/e-commerce']" class="sub-menu-item">E-commerce</a></li>
-                                <li><a [routerLink]="['/real-estate']" class="sub-menu-item">Real Estate </a></li>
-                                <li><a [routerLink]="['/education']" class="sub-menu-item">Education </a></li>
-                                <li><a [routerLink]="['/healthcare']" class="sub-menu-item">Healthcare </a></li>
-                                <li><a [routerLink]="['/hospitality']" class="sub-menu-item">Hospitality </a></li>
-                            </ul>
-                        </li>
+    <a (click)="showshowIndustries()">Services</a><span class="menu-arrow"></span>
+    <ul class="submenu">
+        <li><a [routerLink]="['/type-diabetes']" class="sub-menu-item">Type 1 & Type 2 Diabetes Management</a></li>
+        <li><a [routerLink]="['/thyroid']" class="sub-menu-item">Thyroid Disorder</a></li>
+        <li><a [routerLink]="['/retinopathy']" class="sub-menu-item">Retinopathy</a></li>
+        <li><a [routerLink]="['/nephropathy']" class="sub-menu-item">Nephropathy</a></li>
+        <li><a [routerLink]="['/diet']" class="sub-menu-item">Diabetes Diet</a></li>
+    </ul>
+</li>
 
                         <li><a [routerLink]="['/blog']" class="sub-menu-item">Events</a></li>
                         <!-- <li class="has-submenu parent-parent-menu-item">

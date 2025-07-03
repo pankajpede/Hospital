@@ -1,0 +1,29 @@
+ .service-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1543456621-82c38ba7d1f6');
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 50px;
+        }
+        .eye-icon {
+            font-size: 2rem;
+            color: #0d6efd;
+            margin-right: 15px;
+        }
+        .stage-card {
+            border-left: 4px solid #0d6efd;
+            transition: all 0.3s;
+        }
+        .stage-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .treatment-card {
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            height: 100%;
+        }
+        .treatment-card:hover {
+            transform: translateY(-10px);
+        }

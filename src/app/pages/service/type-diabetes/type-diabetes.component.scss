@@ -1,0 +1,20 @@
+.service-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7');
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 50px;
+        }
+        .service-card {
+            transition: transform 0.3s;
+            margin-bottom: 30px;
+            height: 100%;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        .icon-box {
+            font-size: 2.5rem;
+            color: #0d6efd;
+            margin-bottom: 15px;
+        }
